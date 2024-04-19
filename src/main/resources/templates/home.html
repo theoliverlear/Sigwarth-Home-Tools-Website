@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <title>Sigwarth Home Tools</title>
     <link rel="icon" href="../static/images/favicon/logo_no_text_transparent_3_cropped.ico">
-    <link rel="stylesheet" href="../static/style/global-style.css">
-    <link rel="stylesheet" href="../static/style/home-style.css">
+    <link rel="stylesheet" href="../static/style/global-style.css"
+          th:href="@{/style/global-style.css}">
+    <link rel="stylesheet" href="../static/style/home-style.css"
+          th:href="@{/style/home-style.css}">
 </head>
 <body>
 <nav id="nav-bar">
@@ -38,6 +40,7 @@
             </div>
             <div id="intro-logo-div">
                 <img src="../static/images/logo/logo_no_text_cropped.png"
+                        th:src="@{/images/logo/logo_no_text_cropped.png}"
                      alt="Sigwarth Home Tools Logo"
                      id="intro-logo-img">
             </div>
@@ -53,6 +56,7 @@
             </div>
             <div class="feature-img-div">
                 <img src="../static/images/calculator.png"
+                        th:src="@{/images/calculator.png}"
                      alt="Carb Counter Image"
                      class="feature-img">
             </div>
@@ -65,6 +69,7 @@
             </div>
             <div class="feature-img-div">
                 <img src="../static/images/smoothie.png"
+                     th:src="@{/images/smoothie.png}"
                      alt="Smoothie Image"
                      class="feature-img">
             </div>
@@ -77,6 +82,7 @@
             </div>
             <div class="feature-img-div">
                 <img src="../static/images/calendar.png"
+                     th:src="@{/images/calendar.png}"
                      alt="Infusion Site Image"
                      class="feature-img">
             </div>
