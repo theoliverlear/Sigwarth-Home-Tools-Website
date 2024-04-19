@@ -1,0 +1,109 @@
+/*
+- #FAFDFE - Snowflake
+- #D6E4EA - Cloudy
+- #B9CFD7 - Fog Grey
+- #8DD8DA - Aqua Splash
+- #5E8998 - Steel Teal
+- #53436B - Twilight Velvet
+- #2B314F - Night Velvet
+- #021F32 - Midnight Tide
+- #000E1A - Black Navy
+ */
+:root {
+    --snowflake: #FAFDFE;
+    --cloudy: #D6E4EA;
+    --fog-grey: #B9CFD7;
+    --aqua-splash: #8DD8DA;
+    --steel-teal: #5E8998;
+    --twilight-velvet: #53436B;
+    --night-velvet: #2B314F;
+    --midnight-tide: #021F32;
+    --black-navy: #000E1A;
+}
+h1 {
+    font-size: calc(((4vw + 4vh) / 2) + 10px);
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: calc(((3.25vw + 3.25vh) / 2) + 9px);
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    font-size: calc(((2.5vw + 2.5vh) / 2) + 8px);
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    font-size: calc(((2vw + 2vh) / 2) + 7px);
+    margin: 0;
+    padding: 0;
+}
+h5 {
+    font-size: calc(((1.5vw + 1.5vh) / 2) + 6px);
+    margin: 0;
+    padding: 0;
+}
+h6 {
+    font-size: calc(((1vw + 1vh) / 2) + 5px);
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: calc(((1vw + 1vh) / 2) + 5px);
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*background-color: var(--cloudy);*/
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav {
+    background-color: var(--snowflake);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(((2vw + 2vh) / 2) + 2em);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: calc(((0.05vw + 0.05vh) / 2) + 0.05em) solid var(--cloudy);
+    box-shadow: var(--cloudy) 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em);
+}
+#nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.flexed-row-spaced {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.flexed-row-spaced-vertical {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
