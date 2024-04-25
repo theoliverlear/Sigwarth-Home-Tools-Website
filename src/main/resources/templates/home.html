@@ -16,10 +16,17 @@
 <nav id="nav-bar">
     <section id="nav-items">
         <a>
-            <div class="nav-item">
-                <h4 class="nav-text">
+            <div class="nav-bar-item">
+                <h5 class="nav-bar-text">
                     Home
-                </h4>
+                </h5>
+            </div>
+        </a>
+        <a>
+            <div class="nav-bar-end-item">
+                <h5 class="nav-bar-text">
+                    Meet My Home
+                </h5>
             </div>
         </a>
     </section>
@@ -27,24 +34,25 @@
 <main>
     <!----------------------Intro-Title-Section------------------------------>
     <section id="intro-section">
-        <div class="flexed-row-spaced">
+        <div class="flexed-row-spaced-vertical">
             <div id="title-with-motto-div">
-                <div>
+                <div id="title-text-div">
                     <h1 id="title-text">
                         Sigwarth Home Tools
                     </h1>
                 </div>
-                <div id="motto-text-div">
-                    <h4 id="motto-text">
-                        Tools for my home... and yours too!
-                    </h4>
+                <div id="intro-logo-div">
+                    <img src="../static/images/logo/logo_no_text_cropped.png"
+                         th:src="@{/images/logo/logo_no_text_cropped.png}"
+                         alt="Sigwarth Home Tools Logo"
+                         id="intro-logo-img">
                 </div>
+
             </div>
-            <div id="intro-logo-div">
-                <img src="../static/images/logo/logo_no_text_cropped.png"
-                     th:src="@{/images/logo/logo_no_text_cropped.png}"
-                     alt="Sigwarth Home Tools Logo"
-                     id="intro-logo-img">
+            <div id="motto-text-div">
+                <h4 id="motto-text">
+                    Tools for my home... and yours too!
+                </h4>
             </div>
         </div>
     </section>
