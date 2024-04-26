@@ -23,6 +23,13 @@
             </div>
         </a>
         <a>
+            <div class="nav-bar-item">
+                <h5 class="nav-bar-text">
+                    Tools
+                </h5>
+            </div>
+        </a>
+        <a>
             <div class="nav-bar-end-item">
                 <h5 class="nav-bar-text">
                     Meet My Home
@@ -68,8 +75,8 @@
                         </h4>
                     </div>
                     <div class="feature-img-div">
-                        <img src="../static/images/calculator.png"
-                             th:src="@{/images/calculator.png}"
+                        <img src="../static/images/tools/calculator.png"
+                             th:src="@{/images/tools/calculator.png}"
                              alt="Carb Counter Image"
                              class="feature-img">
                     </div>
@@ -83,9 +90,24 @@
                         </h4>
                     </div>
                     <div class="feature-img-div">
-                        <img src="../static/images/smoothie.svg"
-                             th:src="@{/images/smoothie.svg}"
+                        <img src="../static/images/tools/smoothie.svg"
+                             th:src="@{/images/tools/smoothie.svg}"
                              alt="Smoothie Image"
+                             class="feature-img">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="feature flexed-row-spaced-vertical">
+                    <div class="feature-title-div">
+                        <h5 class="feature-title">
+                            Code Commenter
+                        </h5>
+                    </div>
+                    <div class="feature-img-div">
+                        <img src="../static/images/tools/code_commenter.svg"
+                             th:src="@{/images/tools/code_commenter.svg}"
+                             alt="Code Commenter Image"
                              class="feature-img">
                     </div>
                 </div>
@@ -98,8 +120,8 @@
                         </h5>
                     </div>
                     <div class="feature-img-div">
-                        <img src="../static/images/calendar.png"
-                             th:src="@{/images/calendar.png}"
+                        <img src="../static/images/tools/calendar.png"
+                             th:src="@{/images/tools/calendar.png}"
                              alt="Infusion Site Image"
                              class="feature-img">
                     </div>
@@ -107,7 +129,6 @@
             </div>
         </div>
         <!-------------------Carousel-Controls------------------------------->
-
         <button class="carousel-control-prev" type="button" data-bs-target="#features-section" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <!--   <span class="sr-only">Previous</span>-->
@@ -117,10 +138,34 @@
             <!--   <span class="sr-only">Next</span>-->
         </button>
     </section>
+    <!--------------------------About-Section-------------------------------->
+    <section id="about-section">
+        <div id="about-container">
+            <div id="about-text-div">
+                <h4 id="about-text">
+                    Sigwarth Home Tools is a collection of tools that I have
+                    created for my home. I have diabetes and an interest in
+                    music and programming so I have created tools to help me
+                    manage my life, and perhaps they can help you too!
+                </h4>
+            </div>
+<!--            <div id="family-cover-img-div">-->
+<!--                <img src="../static/images/family/my_family_cover.JPEG"-->
+<!--                     th:src="@{/images/family/my_family_cover.JPEG}"-->
+<!--                     alt="My Family Image"-->
+<!--                     id="family-cover-img">-->
+<!--            </div>-->
+        </div>
+    </section>
 </main>
 <footer>
     <section id="footer-section">
         <div class="flexed-row">
+            <div>
+                <h5 class="footer-text">
+                    &copy; 2024 Oliver Lear Software
+                </h5>
+            </div>
         </div>
     </section>
 </footer>
