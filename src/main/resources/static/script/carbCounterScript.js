@@ -1,0 +1,1 @@
+// TODO: Auto-copy to clipboard option
