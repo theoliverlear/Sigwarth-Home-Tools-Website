@@ -57,6 +57,10 @@ p {
     margin: 0;
     padding: 0;
 }
+.link-no-style {
+    text-decoration: none;
+    color: inherit;
+}
 body {
     /*background-color: var(--cloudy);*/
     margin: 0;
@@ -96,11 +100,26 @@ nav {
 }
 .nav-bar-end-item {
     padding: 0 calc(((0.5vw + 0.5vh) / 2) + 0.5em);
-    border: none;
+    border-left: var(--thin-border) solid var(--black-navy);
 }
 .nav-bar-text {
     padding: 0;
     margin: 0;
+}
+.dropdown-button {
+    background-color: var(--snowflake) !important;
+    border: none;
+    color: var(--black-navy) !important;
+    font-size: calc(((1vw + 1vh) / 2) + 5px) !important;
+    font-weight: 500 !important;
+    margin: 0 calc(((0.5vw + 0.5vh) / 2) + 0.5em) !important;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--cloudy);
+}
+#see-all-tools-text {
+    font-style: italic;
+    text-decoration: underline;
 }
 main {
     display: flex;
