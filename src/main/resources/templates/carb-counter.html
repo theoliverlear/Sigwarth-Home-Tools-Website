@@ -55,7 +55,7 @@
                     </h5>
                 </div>
                 <div class="carb-input-div">
-                    <input type="number" id="serving-unit" class="carb-input">
+                    <input type="number" min="0" id="serving-size" class="carb-input">
                 </div>
             </div>
             <div class="carb-input-with-title">
@@ -65,20 +65,21 @@
                     </h5>
                 </div>
                 <div class="carb-input-div">
-                    <input type="number" id="units-measured" class="carb-input">
+                    <input min="0" type="number" id="units-measured" class="carb-input">
                 </div>
             </div>
             <div class="carb-input-with-title">
                 <div class="carb-input-title">
-                    <h5 class="carb-input-title-text">
+                    <h4 class="carb-input-title-text">
                         Carbs per Serving
-                    </h5>
+                    </h4>
                 </div>
                 <div class="carb-input-div">
-                    <input type="number" id="carbs-per-serving" class="carb-input">
+                    <input type="number" min="0" id="carbs-per-serving" class="carb-input">
                 </div>
             </div>
         </div>
+        <hr />
         <div id="carb-output-container">
             <div id="carb-output-title-div" th:replace="carb-output-patch :: carb-output-patch">
 
