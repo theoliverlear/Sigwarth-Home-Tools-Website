@@ -15,21 +15,47 @@
 <body>
 <nav id="nav-bar">
     <section id="nav-items">
-        <a>
+        <a href="/" class="link-no-style">
             <div class="nav-bar-item">
                 <h5 class="nav-bar-text">
                     Home
                 </h5>
             </div>
         </a>
-        <a>
-            <div class="nav-bar-item">
-                <h5 class="nav-bar-text">
-                    Tools
-                </h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Tools
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item link-no-style" href="/carb-counter/">
+                    <h5 class="nav-bar-text">
+                        Carb Counter
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/smoothie-size/">
+                    <h5 class="nav-bar-text">
+                        Smoothie Sizes
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/code-commenter/">
+                    <h5 class="nav-bar-text">
+                        Code Commenter
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/infusion-site/">
+                    <h5 class="nav-bar-text">
+                        Infusion Site
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/tools/">
+                    <h5 class="nav-bar-text" id="see-all-tools-text">
+                        See All Tools
+                    </h5>
+                </a>
             </div>
-        </a>
-        <a>
+        </div>
+        <a href="/meetmyhome/" class="link-no-style">
             <div class="nav-bar-end-item">
                 <h5 class="nav-bar-text">
                     Meet My Home
