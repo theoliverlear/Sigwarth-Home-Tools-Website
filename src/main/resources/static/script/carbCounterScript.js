@@ -5,7 +5,7 @@ let unitsMeasured = document.getElementById("units-measured");
 let carbsPerServing = document.getElementById("carbs-per-serving");
 let carbOutputTitleDiv = document.getElementById("carb-output-title-div");
 function updateCarbCount() {
-    fetch("/carbcounter/count", {
+    fetch("/carb-counter/count", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -21,4 +21,11 @@ function updateCarbCount() {
 }
 Array.from(carbInputs).forEach(input => {
     input.addEventListener("input", updateCarbCount);
+    input.addEventListener("keypress", onlyPositiveNumbers);
 });
+function onlyPositiveNumbers(event) {
+    let charKey = String.fromCharCode(event.which);
+    if (!/[\d.]/.test(charKey)) {
+        event.preventDefault();
+    }
+}
