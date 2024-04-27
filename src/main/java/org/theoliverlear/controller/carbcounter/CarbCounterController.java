@@ -11,7 +11,8 @@ import org.theoliverlear.model.CarbCalculator;
 @RequestMapping("/carbcounter")
 public class CarbCounterController {
     @RequestMapping("/")
-    public String carbCounter() {
+    public String carbCounter(Model model) {
+        model.addAttribute("carbOutput", 0.0);
         return "carb-counter";
     }
     @RequestMapping("/count")
@@ -21,6 +22,6 @@ public class CarbCounterController {
         double carbsPerServing = request.getCarbsPerServing();
         double carbs = CarbCalculator.calculateCarbs(unitsMeasured, unitsPerServing, carbsPerServing);
         model.addAttribute("carbOutput", carbs);
-        return "carb-counter";
+        return "carb-output-patch :: carb-output-patch";
     }
 }
