@@ -1,0 +1,22 @@
+main {
+    margin: calc(((1.5vw + 1.5vh) / 2) + 1em);
+}
+#carb-counter-section {
+    padding: calc(((2vw + 2vh) / 2) + 1em);
+    box-shadow: var(--cloudy) calc(((1vw + 1vh) / 2) / 2) calc(((1vw + 1vh) / 2) / 2) 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: calc(((3vw + 3vh) / 2) + 1em);
+}
+.carb-input-with-title {
+    margin: calc(((0.75vw + 0.75vh) / 2) + 0.5em);
+}
+.carb-input-div {
+    margin: calc(((0.5vw + 0.5vh) / 2) + 0.25em);
+}
+.carb-input {
+    padding: 0 0 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em);
+    border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em);
+}
