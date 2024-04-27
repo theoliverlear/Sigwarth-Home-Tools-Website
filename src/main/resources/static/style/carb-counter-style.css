@@ -9,7 +9,7 @@ main {
     justify-content: center;
     flex-direction: column;
     border-radius: calc(((3vw + 3vh) / 2) + 1em);
-    width: calc(((50vw + 50vh) / 2) + 20em);
+    width: calc(((30vw + 30vh) / 2) + 10em);
 }
 .carb-input-with-title {
     margin: calc(((0.75vw + 0.75vh) / 2) + 0.5em);
