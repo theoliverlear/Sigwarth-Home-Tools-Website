@@ -8,7 +8,7 @@ import org.theoliverlear.communication.CarbCounterRequest;
 import org.theoliverlear.model.CarbCalculator;
 
 @Controller
-@RequestMapping("/carbcounter")
+@RequestMapping("/carb-counter")
 public class CarbCounterController {
     @RequestMapping("/")
     public String carbCounter(Model model) {
