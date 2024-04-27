@@ -15,21 +15,47 @@
 <body>
 <nav id="nav-bar">
     <section id="nav-items">
-        <a>
+        <a href="/" class="link-no-style">
             <div class="nav-bar-item">
                 <h5 class="nav-bar-text">
                     Home
                 </h5>
             </div>
         </a>
-        <a>
-            <div class="nav-bar-item">
-                <h5 class="nav-bar-text">
-                    Tools
-                </h5>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Tools
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item link-no-style" href="/carb-counter/">
+                    <h5 class="nav-bar-text">
+                        Carb Counter
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/smoothie-size/">
+                    <h5 class="nav-bar-text">
+                        Smoothie Sizes
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/code-commenter/">
+                    <h5 class="nav-bar-text">
+                        Code Commenter
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/infusion-site/">
+                    <h5 class="nav-bar-text">
+                        Infusion Site
+                    </h5>
+                </a>
+                <a class="dropdown-item link-no-style" href="/tools/">
+                    <h5 class="nav-bar-text" id="see-all-tools-text">
+                        See All Tools
+                    </h5>
+                </a>
             </div>
-        </a>
-        <a>
+        </div>
+        <a href="/meetmyhome/" class="link-no-style">
             <div class="nav-bar-end-item">
                 <h5 class="nav-bar-text">
                     Meet My Home
@@ -48,13 +74,14 @@
                         Sigwarth Home Tools
                     </h1>
                 </div>
-                <div id="intro-logo-div">
-                    <img src="../static/images/logo/logo_no_text_cropped.png"
-                         th:src="@{/images/logo/logo_no_text_cropped.png}"
-                         alt="Sigwarth Home Tools Logo"
-                         id="intro-logo-img">
-                </div>
-
+                <a class="link-no-style" href="/meetmyhome/">
+                    <div id="intro-logo-div">
+                        <img src="../static/images/logo/logo_no_text_cropped.png"
+                             th:src="@{/images/logo/logo_no_text_cropped.png}"
+                             alt="Sigwarth Home Tools Logo"
+                             id="intro-logo-img">
+                    </div>
+                </a>
             </div>
             <div id="motto-text-div">
                 <h4 id="motto-text">
@@ -74,12 +101,14 @@
                             Carb Counter
                         </h4>
                     </div>
-                    <div class="feature-img-div">
-                        <img src="../static/images/tools/calculator.png"
-                             th:src="@{/images/tools/calculator.png}"
-                             alt="Carb Counter Image"
-                             class="feature-img">
-                    </div>
+                    <a href="/carb-counter/" class="link-no-style">
+                        <div class="feature-img-div">
+                            <img src="../static/images/tools/calculator.png"
+                                 th:src="@{/images/tools/calculator.png}"
+                                 alt="Carb Counter Image"
+                                 class="feature-img">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -89,12 +118,14 @@
                             Smoothie Sizes
                         </h4>
                     </div>
-                    <div class="feature-img-div">
-                        <img src="../static/images/tools/smoothie.svg"
-                             th:src="@{/images/tools/smoothie.svg}"
-                             alt="Smoothie Image"
-                             class="feature-img">
-                    </div>
+                    <a href="/smoothie-size" class="link-no-style">
+                        <div class="feature-img-div">
+                            <img src="../static/images/tools/smoothie.svg"
+                                 th:src="@{/images/tools/smoothie.svg}"
+                                 alt="Smoothie Image"
+                                 class="feature-img">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -104,12 +135,14 @@
                             Code Commenter
                         </h5>
                     </div>
-                    <div class="feature-img-div">
-                        <img src="../static/images/tools/code_commenter.svg"
-                             th:src="@{/images/tools/code_commenter.svg}"
-                             alt="Code Commenter Image"
-                             class="feature-img">
-                    </div>
+                    <a href="/code-commenter/" class="link-no-style">
+                        <div class="feature-img-div">
+                            <img src="../static/images/tools/code_commenter.svg"
+                                 th:src="@{/images/tools/code_commenter.svg}"
+                                 alt="Code Commenter Image"
+                                 class="feature-img">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -119,12 +152,14 @@
                             Infusion Site Tracker
                         </h5>
                     </div>
-                    <div class="feature-img-div">
-                        <img src="../static/images/tools/calendar.png"
-                             th:src="@{/images/tools/calendar.png}"
-                             alt="Infusion Site Image"
-                             class="feature-img">
-                    </div>
+                    <a href="/infusion-site/" class="link-no-style">
+                        <div class="feature-img-div">
+                            <img src="../static/images/tools/calendar.png"
+                                 th:src="@{/images/tools/calendar.png}"
+                                 alt="Infusion Site Image"
+                                 class="feature-img">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -149,12 +184,12 @@
                     manage my life, and perhaps they can help you too!
                 </h4>
             </div>
-<!--            <div id="family-cover-img-div">-->
-<!--                <img src="../static/images/family/my_family_cover.JPEG"-->
-<!--                     th:src="@{/images/family/my_family_cover.JPEG}"-->
-<!--                     alt="My Family Image"-->
-<!--                     id="family-cover-img">-->
-<!--            </div>-->
+            <!--            <div id="family-cover-img-div">-->
+            <!--                <img src="../static/images/family/my_family_cover.JPEG"-->
+            <!--                     th:src="@{/images/family/my_family_cover.JPEG}"-->
+            <!--                     alt="My Family Image"-->
+            <!--                     id="family-cover-img">-->
+            <!--            </div>-->
         </div>
     </section>
 </main>
