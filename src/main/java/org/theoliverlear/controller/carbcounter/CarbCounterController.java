@@ -11,17 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.theoliverlear.communication.CarbItemRequest;
 import org.theoliverlear.communication.TotalCarbResponse;
 import org.theoliverlear.model.CarbItem;
-import org.theoliverlear.service.CarbCounterService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @Controller
 @RequestMapping("/carb-counter")
 public class CarbCounterController {
-    @Autowired
-    CarbCounterService carbCounterService;
     CopyOnWriteArrayList<CarbItem> carbItems = new CopyOnWriteArrayList<>();
     @RequestMapping("/")
     public String carbCounter(Model model) {
