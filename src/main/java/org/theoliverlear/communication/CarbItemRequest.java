@@ -3,12 +3,12 @@ package org.theoliverlear.communication;
 import lombok.Data;
 
 @Data
-public class CarbCounterRequest {
-    double unitsPerServing;
+public class CarbItemRequest {
+    double servingWeight;
     double unitsMeasured;
     double carbsPerServing;
-    public CarbCounterRequest(double unitsPerServing, double unitsMeasured, double carbsPerServing) {
-        this.unitsPerServing = unitsPerServing;
+    public CarbItemRequest(double servingWeight, double unitsMeasured, double carbsPerServing) {
+        this.servingWeight = servingWeight;
         this.unitsMeasured = unitsMeasured;
         this.carbsPerServing = carbsPerServing;
     }
