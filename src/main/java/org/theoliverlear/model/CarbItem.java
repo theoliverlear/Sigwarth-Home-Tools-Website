@@ -32,10 +32,12 @@ public class CarbItem {
     @Override
     public String toString() {
         return """
+                ---------------------
                 Serving Weight: %s
                 Weight Units: %s
                 Carbs Per Serving: %s
                 Carbs: %s
+                ---------------------
                 """.formatted(this.servingWeight, this.weightUnits, this.carbsPerServing, this.carbs);
     }
     @Override
