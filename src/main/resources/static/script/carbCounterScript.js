@@ -17,13 +17,9 @@ let removeItemButtons = document.getElementsByClassName("remove-item-button");
 addItemButton.addEventListener("click", addItemSequence);
 function addItemSequence() {
     addItemToPage();
-    addItemToServer(0, 0, 0);
     updateItemNumbers();
 }
 function addItemToPage() {
-    /*
-    Create a div with empty inputs, label its id as the item number,
-     */
     let carbInputWithOutput = document.createElement("div");
     carbInputWithOutput.classList.add("carb-input-with-output");
     carbInputWithOutput.innerHTML = getCarbItemHtml(carbInputWithOutputs.length + 1);
@@ -32,7 +28,6 @@ function addItemToPage() {
     attachCarbInputListeners();
     updateTotalCarbs();
 }
-addItemToServer(0, 0, 0);
 function getCarbItemHtml(itemNumber = 2) {
     return `
             <div class="carb-input-container" id="carb-item-${itemNumber}">
@@ -88,38 +83,13 @@ function getCarbItemHtml(itemNumber = 2) {
             <hr />
     `;
 }
-function addItemToServer(servingWeight, unitsMeasured, carbsPerServing) {
-    console.log("Called add item to server");
-    fetch("/carb-counter/add", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            servingWeight: servingWeight,
-            unitsMeasured: unitsMeasured,
-            carbsPerServing: carbsPerServing
-        })
-    }).then(response => response.json()).then(responseData => {
-        console.log(responseData);
-    });
-}
-function removeItemFromServer(itemNumber) {
-    fetch(`/carb-counter/remove/${itemNumber}`, {
-        method: "DELETE",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(response => response.json()).then(responseData => {
-        console.log(responseData);
-    });
-}
+
 function removeSequence() {
     let itemNumber = this.parentElement.id.split("-")[2];
     console.log(itemNumber);
-    removeItemFromServer(itemNumber);
     removeFromPage(this);
     updateItemNumbers();
+    updateTotalCarbs();
 }
 function attachRemoveItemListeners() {
     Array.from(removeItemButtons).forEach(button => {
@@ -171,24 +141,8 @@ function updateSequence() {
     let servingWeight = getFromParent(this, "serving-size");
     let unitsMeasured = getFromParent(this, "units-measured");
     let carbsPerServing = getFromParent(this, "carbs-per-serving");
-    updateItemToServer(itemNumber, servingWeight, unitsMeasured, carbsPerServing);
     updateItemCarbCount(this, servingWeight, unitsMeasured, carbsPerServing);
     updateTotalCarbs();
-}
-function updateItemToServer(itemNumber, servingWeight, unitsMeasured, carbsPerServing) {
-    fetch(`/carb-counter/update/${itemNumber}`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            servingWeight: servingWeight,
-            unitsMeasured: unitsMeasured,
-            carbsPerServing: carbsPerServing
-        })
-    }).then(response => {
-        console.log(response);
-    });
 }
 async function getItemCarbCount(servingWeight, unitsMeasured, carbsPerServing) {
     let response = await fetch("/carb-counter/count", {
