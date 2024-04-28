@@ -1,5 +1,5 @@
-<div id="carb-output-title-div" th:fragment="carb-output-patch">
+<div id="carb-output-title-div" th:each="carbItem : ${carbItems}" th:fragment="${carbItem.templateName} + ' :: carbItemFragment($carbItems)}'">
     <h3 id="carb-output-title-text">
-        Total Carbs: <span id="total-carbs" th:text="${carbOutput}">0</span>
+        Item's Carbs: <span id="item-carbs" th:text="${carbItem.carbs}">0</span>
     </h3>
 </div>
