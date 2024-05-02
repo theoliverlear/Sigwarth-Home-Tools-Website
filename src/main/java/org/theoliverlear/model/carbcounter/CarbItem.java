@@ -1,4 +1,4 @@
-package org.theoliverlear.model;
+package org.theoliverlear.model.carbcounter;
 
 import lombok.Getter;
 import lombok.Setter;
