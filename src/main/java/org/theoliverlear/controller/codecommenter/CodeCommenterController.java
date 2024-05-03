@@ -24,6 +24,11 @@ public class CodeCommenterController {
         HeadingType headingType = HeadingType.fromName(codeCommentRequest.getType());
         String textContent = codeCommentRequest.getTextContent();
         int indentLevel = codeCommentRequest.getIndentLevel();
+        if (indentLevel > 5) {
+            indentLevel = 5;
+        } else if (indentLevel < 0) {
+            indentLevel = 0;
+        }
         this.commentBuilder.buildComment(headingType, textContent, indentLevel);
         return new ResponseEntity<>(this.commentBuilder.getComment(), HttpStatus.OK);
     }
