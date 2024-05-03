@@ -104,9 +104,9 @@
                             Current Type:
                         </h3>
                     </div>
-                <code id="current-type-chosen-code" class="code-output-section">
-                    //--------Heading--------
-                </code>
+                    <code id="current-type-chosen-code" class="code-output-section">
+                        //--------Heading--------
+                    </code>
                 </div>
                 <button class="btn btn-secondary dropdown-toggle dropdown-button" type="button" id="commentTypeDropdown"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -142,7 +142,18 @@
                 </h3>
             </div>
             <div>
-                <input type="text" id="heading-text-input" class="comment-input-text">
+                <input type="text" id="heading-text-input" maxlength="50" class="comment-input">
+            </div>
+        </div>
+        <div id="indentation-div">
+            <div>
+                <h3 id="indentation-title">
+                    Indentation
+                </h3>
+            </div>
+            <div>
+                <input type="number" min="0" max="10" value="0" id="indentation-input"
+                       class="comment-input comment-input-number">
             </div>
         </div>
         <div id="advanced-settings">
