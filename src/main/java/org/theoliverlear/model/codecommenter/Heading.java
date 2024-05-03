@@ -11,7 +11,7 @@ public class Heading {
     public Heading() {
         this.headingType = HeadingType.THIN;
         this.text = "";
-        this.isIndentCorrected = false;
+        this.isIndentCorrected = true;
         this.editor = new Editor();
     }
     public Heading(HeadingType headingType, String text, boolean isIndentCorrected) {
@@ -23,13 +23,13 @@ public class Heading {
     public Heading(String text, Editor editor) {
         this.headingType = HeadingType.THIN;
         this.text = text;
-        this.isIndentCorrected = false;
+        this.isIndentCorrected = true;
         this.editor = editor;
     }
     public Heading(HeadingType headingType, String text, Editor editor) {
         this.headingType = headingType;
         this.text = text;
-        this.isIndentCorrected = false;
+        this.isIndentCorrected = true;
         this.editor = editor;
     }
     //=============================-Methods--=================================
