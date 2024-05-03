@@ -73,9 +73,11 @@ public class Heading {
         String[] words = heading.split(" ");
         StringBuilder normalizedHeading = new StringBuilder();
         for (String word : words) {
-            normalizedHeading.append(word.substring(0, 1).toUpperCase());
-            normalizedHeading.append(word.substring(1).toLowerCase());
-            normalizedHeading.append("-");
+            if (!word.isEmpty()) {
+                normalizedHeading.append(word.substring(0, 1).toUpperCase());
+                normalizedHeading.append(word.substring(1).toLowerCase());
+                normalizedHeading.append("-");
+            }
         }
         return normalizedHeading.toString();
     }
