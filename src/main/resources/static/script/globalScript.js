@@ -6,9 +6,10 @@ window.onload = function() {
         });
     }
 }
-export function onlyPositiveNumbers(event) {
+function onlyPositiveNumbers(event) {
     let charKey = String.fromCharCode(event.which);
     if (!/[\d.]/.test(charKey)) {
         event.preventDefault();
     }
 }
+export { onlyPositiveNumbers };
