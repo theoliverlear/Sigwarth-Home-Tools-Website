@@ -1,4 +1,6 @@
 // TODO: Auto-copy to clipboard option, Image detection
+import { onlyPositiveNumbers } from "./globalScript";
+
 let carbInputs = document.getElementsByClassName("carb-input");
 let servingWeightInputs = document.getElementsByClassName("serving-size");
 let unitsMeasuredInputs = document.getElementsByClassName("units-measured");
@@ -170,9 +172,3 @@ Array.from(carbInputs).forEach(input => {
     input.addEventListener("input", updateSequence);
     input.addEventListener("keypress", onlyPositiveNumbers);
 });
-function onlyPositiveNumbers(event) {
-    let charKey = String.fromCharCode(event.which);
-    if (!/[\d.]/.test(charKey)) {
-        event.preventDefault();
-    }
-}
