@@ -1,5 +1,5 @@
 // TODO: Auto-copy to clipboard option, Image detection
-import { onlyPositiveNumbers } from "./globalScript";
+import { onlyPositiveNumbers } from "./globalScript.js";
 
 let carbInputs = document.getElementsByClassName("carb-input");
 let servingWeightInputs = document.getElementsByClassName("serving-size");
