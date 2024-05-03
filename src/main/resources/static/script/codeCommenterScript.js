@@ -1,3 +1,5 @@
+import { onlyPositiveNumbers } from "./globalScript.js";
+
 let copyToClipboardButton = document.getElementById('copy-to-clipboard-button');
 let generatedCommentText = document.getElementById('generated-comment-text');
 copyToClipboardButton.addEventListener('click', copyToClipboard);
@@ -14,9 +16,6 @@ function buttonSaysCopied() {
 let currentTypeChosenCode = document.getElementById('current-type-chosen-code');
 let codeHeaderTypeChoices = document.getElementsByClassName('header-output-option');
 let commentInputs = document.getElementsByClassName('comment-input');
-Array.from(commentInputs).forEach(input => {
-    input.addEventListener('input', sendCodeToServer);
-});
 Array.from(codeHeaderTypeChoices).forEach(choice => {
     choice.addEventListener('click', changeHeadingType);
 });
@@ -26,6 +25,35 @@ function changeHeadingType() {
 }
 let headingTextInput = document.getElementById('heading-text-input');
 let indentationInput = document.getElementById('indentation-input');
+indentationInput.addEventListener('keypress', onlyPositiveNumbers);
+
+function limitIndent() {
+    let value = normalizeInteger(indentationInput.value);
+    if (value > 5) {
+        indentationInput.value = 5;
+    }
+    if (value < 0) {
+        indentationInput.value = 0;
+    }
+}
+
+function limitLength() {
+    let currentIndentation = normalizeInteger(indentationInput.value);
+    let adjustedLength = adjustForIndentation(currentIndentation);
+    let value = headingTextInput.value;
+    if (value.length > adjustedLength) {
+        headingTextInput.value = value.substring(0, adjustedLength);
+    }
+}
+headingTextInput.addEventListener('input', headingTextSequence);
+function headingTextSequence() {
+    limitLength();
+    sendCodeToServer();
+}
+function adjustForIndentation(indentation) {
+    let adjustedLength = 50 - (indentation * 4);
+    return adjustedLength;
+}
 function headingContentToName(textContent) {
     textContent = textContent.trim();
     switch (textContent) {
@@ -75,3 +103,9 @@ function sendCodeToServer() {
 function receiveCodeFromServer(codeHeading) {
     generatedCommentText.innerText = codeHeading;
 }
+function indentationSequence() {
+    limitIndent();
+    limitLength();
+    sendCodeToServer();
+}
+indentationInput.addEventListener('input', indentationSequence);
