@@ -19,8 +19,8 @@ main {
     border-bottom: var(--thin-border) solid var(--steel-teal);
 }
 #output-section {
-    width: calc(((50vw + 50vh) / 2) + 5em);
-    max-width: 70vw;
+    width: calc(((75vw + 75vh) / 2) + 8em);
+    max-width: 96vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,10 @@ main {
 }
 #generated-comment {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 calc(((1vh + 1vw) / 2) + 0.5em) 0;
 }
 
 #settings-section {
@@ -51,8 +55,6 @@ main {
     background-color: var(--steel-teal);
     color: var(--snowflake);
     padding: calc(((1vh + 1vw) / 2) + 0.25em) 0;
-
-
 }
 #comment-type-dropdown {
     top: 100% !important;
@@ -95,9 +97,23 @@ main {
     background-color: var(--steel-teal);
     flex-direction: column;
 }
-.comment-input-text {
+#indentation-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: calc(((0.5vw + 0.5vh) / 2) + 0.5em) 0;
+    flex-direction: column;
+}
+.comment-input {
     padding: 0 0 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em);
     border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em);
     width: calc(((20vw + 20vh) / 2) + 5em);
+    height: calc(((1.25vw + 1.25vh) / 2) + 1em);
+}
+.comment-input-number {
+    padding: 0 0 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em);
+    border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em);
+    width: calc(((5vw + 5vh) / 2) + 1.25em);
     height: calc(((1.25vw + 1.25vh) / 2) + 1em);
 }
