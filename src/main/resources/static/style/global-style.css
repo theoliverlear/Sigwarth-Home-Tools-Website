@@ -133,7 +133,7 @@ img {
     user-select: none;
 }
 code {
-    font-size: calc(((1.5vw + 1.5vh) / 2) + 6px) !important;
+    font-size: calc(((1.4vw + 1.4vh) / 2) + 6px) !important;
     font-weight: 500 !important;
     color: var(--steel-teal) !important;
 }
@@ -141,7 +141,7 @@ code {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 90%;
     padding: calc(((0.05vh + 0.05vw) / 2) + 0.05em) calc(((0.5vh + 0.5vw) / 2) + 0.5em);
     background-color: var(--pure-grey);
     border-radius: calc(((2.35vh + 2.35vw) / 2) + 0.5em);
