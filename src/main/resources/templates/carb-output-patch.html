@@ -1,5 +1,0 @@
-<div id="carb-output-title-div" th:each="carbItem : ${carbItems}" th:fragment="${carbItem.templateName} + ' :: carbItemFragment($carbItems)}'">
-    <h3 id="carb-output-title-text">
-        Item's Carbs: <span id="item-carbs" th:text="${carbItem.carbs}">0</span>
-    </h3>
-</div>
