@@ -1,4 +1,4 @@
-import { onlyPositiveNumbers } from "./globalScript.js";
+import {onlyPositiveNumbers, removeTrailingZeros} from "./globalScript.js";
 
 let copyToClipboardButton = document.getElementById('copy-to-clipboard-button');
 let generatedCommentText = document.getElementById('generated-comment-text');
@@ -105,7 +105,15 @@ function receiveCodeFromServer(codeHeading) {
 }
 function indentationSequence() {
     limitIndent();
+    removeTrailingZeros(indentationInput.value);
     limitLength();
     sendCodeToServer();
 }
 indentationInput.addEventListener('input', indentationSequence);
+
+let headingTextClearButton = document.getElementById('heading-text-clear-button');
+headingTextClearButton.addEventListener('click', clearHeadingText);
+function clearHeadingText() {
+    headingTextInput.value = '';
+    sendCodeToServer();
+}
