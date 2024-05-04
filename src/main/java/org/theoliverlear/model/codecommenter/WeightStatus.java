@@ -2,6 +2,7 @@ package org.theoliverlear.model.codecommenter;
 
 public enum WeightStatus {
     //============================-Variables-=================================
+    NO_WEIGHT("No Weight"),
     UNDERWEIGHT("Underweight"),
     GOOD_WEIGHT("Good Weight"),
     OVERWEIGHT("Overweight");
@@ -15,7 +16,9 @@ public enum WeightStatus {
 
     //-----------------------------From-Ratio---------------------------------
     public static WeightStatus fromRatio(double ratio) {
-        if (ratio < 0.9) {
+        if (ratio == 0.0) {
+            return NO_WEIGHT;
+        } else if (ratio < 0.9) {
             return UNDERWEIGHT;
         } else if (ratio > 1.1) {
             return OVERWEIGHT;
