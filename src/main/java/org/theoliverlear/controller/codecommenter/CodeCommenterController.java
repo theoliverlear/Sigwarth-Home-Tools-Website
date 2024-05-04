@@ -3,7 +3,6 @@ package org.theoliverlear.controller.codecommenter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.theoliverlear.communication.CodeCommentRequest;
@@ -22,7 +21,7 @@ public class CodeCommenterController {
     @RequestMapping("/generate")
     public ResponseEntity<String> generate(@RequestBody CodeCommentRequest codeCommentRequest) {
         HeadingType headingType = HeadingType.fromName(codeCommentRequest.getType());
-        String textContent = codeCommentRequest.getTextContent();
+        String textContent = codeCommentRequest.getTextContent().trim();
         int indentLevel = codeCommentRequest.getIndentLevel();
         if (indentLevel > 5) {
             indentLevel = 5;
