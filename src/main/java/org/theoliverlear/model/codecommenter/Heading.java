@@ -62,21 +62,25 @@ public class Heading {
         this.concatCommentParts(leftThinHeading, titleHeader, rightThinHeading);
     }
     //-----------------------Concat-Comment-Parts-----------------------------
-    public void concatCommentParts(String leftThinHeading, String headingBuilder,
-                                   String rightThinHeading) {
-        this.comment = "%s%s%s%s%s".formatted(this.headingType.PRE_ARTIFACT, leftThinHeading,
-                                              headingBuilder, rightThinHeading,
+    public void concatCommentParts(String leftHeading, String titleHeader,
+                                   String rightHeading) {
+        this.comment = "%s%s%s%s%s".formatted(this.headingType.PRE_ARTIFACT, leftHeading,
+                                              titleHeader, rightHeading,
                                               this.headingType.POST_ARTIFACT);
     }
     //----------------------Normalize-Heading-Text----------------------------
     public static String normalizeHeadingText(String heading) {
+        heading = heading.trim();
         String[] words = heading.split(" ");
         StringBuilder normalizedHeading = new StringBuilder();
-        for (String word : words) {
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
             if (!word.isEmpty()) {
                 normalizedHeading.append(word.substring(0, 1).toUpperCase());
                 normalizedHeading.append(word.substring(1).toLowerCase());
-                normalizedHeading.append("-");
+                if (i < words.length - 1) {
+                    normalizedHeading.append("-");
+                }
             }
         }
         return normalizedHeading.toString();
