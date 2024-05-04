@@ -2,12 +2,14 @@
     margin: calc(((1vw + 1vh) / 2) + 1em) 0 calc(((2vw + 2vh) / 2) + 2em) 0;
     box-shadow: var(--black-navy) calc(((0.5vw + 0.5vh) / 2) + 0.5em) calc(((0.5vw + 0.5vh) / 2) + 0.5em) 0 0;
     border-radius: calc(((1vw + 1vh) / 2) + 1em);
-    width: 90%;
+    width: calc(((50vw + 50vh) / 2) + 10em);
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(((10vw + 10vh) / 2) + 10em);
     border: var(--thin-border) solid var(--black-navy);
+    max-width: 1200px;
+    padding: 0 0 calc(((1vw + 1vh) / 2) + 1em) 0;
 }
 #title-with-motto-div {
     display: flex;
@@ -66,6 +68,7 @@
 #intro-logo-img {
     width: calc(((8vw + 8vh) / 2) + 2em);
     border-radius: calc(((2vw + 2vh) / 2) + 2em);
+    max-width: 200px;
     margin: 0;
     padding: 0;
 }
@@ -102,7 +105,7 @@
     border-radius: calc(((2vw + 2vh) / 2) + 2em);
     background-color: var(--twilight-velvet);
     /*background-color: var(--twilight-velvet);*/
-    box-shadow: var(--night-velvet) 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.15vw + 0.15vh) / 2) + 0.15em);
+    box-shadow: var(--night-velvet) 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.5em) calc(((0.15vw + 0.15vh) / 2) + 0.15em);
 }
 .feature-img {
     width: calc(((7vw + 7vh) / 2) + 5em);
@@ -133,7 +136,7 @@
     padding: 0 0 calc(((1vw + 1vh) / 2) + 1em) 0;
 }
 #about-text-div {
-    width: 75%;
+    width: calc(((50vw + 50vh) / 2) + 5em);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,6 +145,7 @@
     border-radius: calc(((1vw + 1vh) / 2) + 1em);
     background-color: var(--black-navy);
     box-shadow: var(--night-velvet) calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em) 0 0;
+    max-width: 1200px;
 }
 #about-text {
     color: var(--snowflake);
