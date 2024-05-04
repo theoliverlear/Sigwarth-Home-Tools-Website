@@ -15,8 +15,8 @@ main {
     background-color: var(--pure-grey);
     margin: calc(((1.5vh + 1.5vw) / 2) + 0.5em) 0;
     padding: calc(((1.5vh + 1.5vw) / 2) + 0.5em) 0;
-    border-top: var(--thin-border) solid var(--steel-teal);
-    border-bottom: var(--thin-border) solid var(--steel-teal);
+    border-top: var(--thin-border) solid var(--aqua-splash);
+    border-bottom: var(--thin-border) solid var(--aqua-splash);
 }
 #output-section {
     width: calc(((75vw + 75vh) / 2) + 8em);
@@ -97,6 +97,12 @@ main {
     background-color: var(--steel-teal);
     flex-direction: column;
 }
+#heading-text-input {
+    padding: 0 0 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em);
+    width: calc(((20vw + 20vh) / 2) + 5em) !important;
+    height: calc(((1.25vw + 1.25vh) / 2) + 1em) !important;
+    border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em) 0 0 calc(((0.75vw + 0.75vh) / 2) + 0.25em);
+}
 #indentation-div {
     display: flex;
     justify-content: center;
@@ -116,4 +122,15 @@ main {
     border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em);
     width: calc(((5vw + 5vh) / 2) + 1.25em);
     height: calc(((1.25vw + 1.25vh) / 2) + 1em);
+}
+#heading-text-clear-button {
+    height: calc(((1.25vw + 1.25vh) / 2) + 1em) !important;
+    width: calc(((1.25vw + 1.25vh) / 2) + 1em) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: calc(((1.2vw + 1.2vh) / 2) + 0.1em) !important;
+    border-radius: 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em) calc(((0.5vw + 0.5vh) / 2) + 0.25em) 0;
 }
