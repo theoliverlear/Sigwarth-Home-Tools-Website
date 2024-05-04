@@ -12,4 +12,14 @@ function onlyPositiveNumbers(event) {
         event.preventDefault();
     }
 }
+function removeTrailingZeros(value) {
+    for (let i = value.length - 1; i >= 0; i--) {
+        if (value[i] === '0') {
+            value = value.slice(i + 1);
+        } else {
+            break;
+        }
+    }
+}
 export { onlyPositiveNumbers };
+export { removeTrailingZeros };
