@@ -24,37 +24,37 @@
     --thin-border: calc(((0.05vw + 0.05vh) / 2) + 0.05em);
 }
 h1 {
-    font-size: calc(((4.25vw + 4.25vh) / 2) + 10px);
+    font-size: min(calc(((4.25vw + 4.25vh) / 2) + 10px), 60px) !important;
     margin: 0;
     padding: 0;
 }
 h2 {
-    font-size: calc(((3.25vw + 3.25vh) / 2) + 9px);
+    font-size: min(calc(((3.25vw + 3.25vh) / 2) + 9px), 50px)!important;
     margin: 0;
     padding: 0;
 }
 h3 {
-    font-size: calc(((2.5vw + 2.5vh) / 2) + 8px);
+    font-size: min(calc(((2.5vw + 2.5vh) / 2) + 8px), 44px) !important;
     margin: 0;
     padding: 0;
 }
 h4 {
-    font-size: calc(((2vw + 2vh) / 2) + 7px);
+    font-size: min(calc(((2vw + 2vh) / 2) + 7px), 36px) !important;
     margin: 0;
     padding: 0;
 }
 h5 {
-    font-size: calc(((1.5vw + 1.5vh) / 2) + 6px);
+    font-size: min(calc(((1.5vw + 1.5vh) / 2) + 6px), 28px) !important;
     margin: 0;
     padding: 0;
 }
 h6 {
-    font-size: calc(((1vw + 1vh) / 2) + 5px);
+    font-size: min(calc(((1vw + 1vh) / 2) + 5px), 24px) !important;
     margin: 0;
     padding: 0;
 }
 p {
-    font-size: calc(((1vw + 1vh) / 2) + 5px);
+    font-size: calc(((1vw + 1vh) / 2) + 24px) !important;
     margin: 0;
     padding: 0;
 }
@@ -82,12 +82,13 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(((2vw + 2vh) / 2) + 2em);
+    height: calc(((2vw + 4vh) / 2) + 2em);
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: calc(((0.05vw + 0.05vh) / 2) + 0.05em) solid var(--cloudy);
     box-shadow: var(--cloudy) 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em);
+    max-height: 200px;
 }
 #nav-items {
     display: flex;
@@ -106,6 +107,10 @@ nav {
 .nav-bar-text {
     padding: 0;
     margin: 0;
+}
+#dropdown-menu-button {
+    font-size: min(calc(((1.5vw + 1.5vh) / 2) + 6px), 28px) !important;
+
 }
 .dropdown-button {
     background-color: var(--snowflake) !important;
@@ -216,6 +221,10 @@ hr {
     margin-bottom: calc((((0.15vw + 0.15vh) / 2) + 0.15em) * -1);
     margin-left: calc(((0.15vw + 0.15vh) / 2) + 0.15em);
     box-shadow: none;
+}
+.input-div {
+    width: calc(((20vw + 20vh) / 2) + 10em) !important;
+    height: calc(((1.25vw + 1.25vh) / 2) + 1em) !important;
 }
 footer {
     margin-top: auto;
