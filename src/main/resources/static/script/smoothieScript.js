@@ -18,8 +18,14 @@ let carbOutput = document.getElementById('total-carb-output');
 Array.from(smoothieInputs).forEach(input => {
     input.addEventListener('input', updateSmoothie);
     input.addEventListener('keypress', onlyPositiveNumbers);
+    input.addEventListener('input', limitInput);
 });
-
+function limitInput() {
+    if (this.value > 10000) {
+        this.value = 10000;
+    }
+    updateSmoothie();
+}
 function updateSmoothie() {
     fetch('/smoothie/update', {
         method: 'POST',
