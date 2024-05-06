@@ -1,4 +1,4 @@
-package org.theoliverlear.model.codecommenter;
+package org.theoliverlear.model.smoothie;
 
 public enum WeightStatus {
     //============================-Variables-=================================
