@@ -2,7 +2,6 @@ package org.theoliverlear.model.smoothie;
 //=================================-Imports-==================================
 import lombok.Getter;
 import lombok.Setter;
-import org.theoliverlear.model.codecommenter.WeightStatus;
 
 @Getter
 @Setter
@@ -29,4 +28,8 @@ public abstract class SmoothieItem {
 
     //-------------------------Get-Weight-Status------------------------------
     public abstract WeightStatus getWeightStatus(int currentPercentage);
+    //-----------------------------Get-Ratio----------------------------------
+    public abstract double getWeightRatio(int currentPercentage);
+    //-----------------------------Get-Carbs----------------------------------
+    public abstract int getCarbs();
 }
