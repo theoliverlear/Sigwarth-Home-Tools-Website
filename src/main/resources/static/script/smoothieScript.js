@@ -1,5 +1,6 @@
+//=================================-Imports-==================================
 import {onlyPositiveNumbers} from "./globalScript.js";
-
+//================================-Variables-=================================
 let appleJuiceInput = document.getElementById('apple-juice-input');
 let yogurtInput = document.getElementById('yogurt-input');
 let frozenFruitInput = document.getElementById('frozen-fruit-input');
@@ -15,11 +16,9 @@ let appleJuicePercentageText = document.getElementById('apple-juice-percentage-t
 let yogurtPercentageText = document.getElementById('yogurt-percentage-text');
 let frozenFruitPercentageText = document.getElementById('frozen-fruit-percentage-text');
 let carbOutput = document.getElementById('total-carb-output');
-Array.from(smoothieInputs).forEach(input => {
-    input.addEventListener('input', updateSmoothie);
-    input.addEventListener('keypress', onlyPositiveNumbers);
-    input.addEventListener('input', limitInput);
-});
+//================================-Functions-=================================
+
+//--------------------------------Limit-Input---------------------------------
 function limitInput() {
     if (this.value > 10000) {
         this.value = 10000;
@@ -50,3 +49,9 @@ function updateSmoothie() {
             carbOutput.innerText = jsonData.carbsPerDrink;
         });
 }
+//=============================-Event-Listeners-==============================
+Array.from(smoothieInputs).forEach(input => {
+    input.addEventListener('input', updateSmoothie);
+    input.addEventListener('keypress', onlyPositiveNumbers);
+    input.addEventListener('input', limitInput);
+});
