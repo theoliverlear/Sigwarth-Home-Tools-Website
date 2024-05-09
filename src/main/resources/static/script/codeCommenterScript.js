@@ -115,5 +115,6 @@ let headingTextClearButton = document.getElementById('heading-text-clear-button'
 headingTextClearButton.addEventListener('click', clearHeadingText);
 function clearHeadingText() {
     headingTextInput.value = '';
+    headingTextInput.focus();
     sendCodeToServer();
 }
