@@ -36,7 +36,12 @@ function limitIndent() {
         indentationInput.value = 0;
     }
 }
-
+function copyOnEnter(event) {
+    if (event.key === 'Enter') {
+        copyToClipboard();
+    }
+}
+document.addEventListener('keydown', copyOnEnter);
 function limitLength() {
     let currentIndentation = normalizeInteger(indentationInput.value);
     let adjustedLength = adjustForIndentation(currentIndentation);
