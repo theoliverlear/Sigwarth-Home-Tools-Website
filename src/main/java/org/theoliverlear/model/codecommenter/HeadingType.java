@@ -5,6 +5,7 @@ public enum HeadingType {
     THICK("//", "", "="),
     HTML("<!--", "-->", "-"),
     CSS("/*", "*/", "-"),
+    CSS_THICK("/*", "*/", "="),
     THIN_HASH("#", "", "-"),
     THICK_HASH("#", "", "=");
     public final String PRE_ARTIFACT;
@@ -21,6 +22,7 @@ public enum HeadingType {
             case "THICK" -> HeadingType.THICK;
             case "HTML" -> HeadingType.HTML;
             case "CSS" -> HeadingType.CSS;
+            case "CSS_THICK" -> HeadingType.CSS_THICK;
             case "THIN_HASH" -> HeadingType.THIN_HASH;
             case "THICK_HASH" -> HeadingType.THICK_HASH;
             default -> HeadingType.THIN;
