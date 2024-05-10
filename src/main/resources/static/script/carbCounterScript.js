@@ -30,6 +30,11 @@ function addItemToPage() {
     attachCarbInputListeners();
     updateTotalCarbs();
 }
+function limitInput(inputElement) {
+    if (inputElement.value > 10000) {
+        inputElement.value = 10000;
+    }
+}
 function getCarbItemHtml(itemNumber = 2) {
     return `
             <div class="carb-input-container" id="carb-item-${itemNumber}">
@@ -88,7 +93,6 @@ function getCarbItemHtml(itemNumber = 2) {
 
 function removeSequence() {
     let itemNumber = this.parentElement.id.split("-")[2];
-    console.log(itemNumber);
     removeFromPage(this);
     updateItemNumbers();
     updateTotalCarbs();
@@ -134,11 +138,11 @@ function getFromParent(element, inputClassName, getValue = true) {
 async function updateItemCarbCount(element, servingWeight, unitsMeasured, carbsPerServing) {
     let itemCarbTotalText = getFromParent(element.parentElement, "item-carb-total-text", false);
     let carbsOutput = await getItemCarbCount(servingWeight, unitsMeasured, carbsPerServing);
-    console.log(itemCarbTotalText);
     itemCarbTotalText.innerText = carbsOutput;
     updateTotalCarbs();
 }
 function updateSequence() {
+    limitInput(this);
     let itemNumber = this.parentElement.parentElement.parentElement.id.split("-")[2];
     let servingWeight = getFromParent(this, "serving-size");
     let unitsMeasured = getFromParent(this, "units-measured");
