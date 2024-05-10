@@ -69,6 +69,8 @@ function headingContentToName(textContent) {
             return 'THICK_HASH';
         case '/*--------Heading------*/':
             return 'CSS';
+        case '/*=======-Heading-=====*/':
+            return 'CSS_THICK';
     }
 }
 function normalizeInteger(value) {
