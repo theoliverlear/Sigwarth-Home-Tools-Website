@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     padding: calc(((0.5vw + 0.5vh) / 2) + 0.5em);
-    margin: 0;
+    margin: calc(((1vw + 1vh) / 2) + 1em) 0 0 0;
     border-radius: calc(((1vw + 1vh) / 2) + 1em);
     /*background-color: var(--twilight-velvet);*/
     /*background-color: var(--aqua-splash);*/
@@ -40,10 +40,10 @@
 #motto-text-div {
     width: 75%;
     /*margin: calc(((0.5vw + 0.5vh) / 2) + 0.5em) 0;*/
-    margin: 0;
     background-color: var(--cloudy);
     padding: calc(((0.5vw + 0.5vh) / 2) + 0.5em);
     border-radius: calc(((1vw + 1vh) / 2) + 1em);
+    margin: 0 0 calc(((1vw + 1vh) / 2) + 1em) 0;
     /*border: calc(((0.05vw + 0.05vh) / 2) + 0.05em) solid var(--black-navy);*/
     box-shadow: var(--black-navy) calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em) 0 0;
 }
@@ -66,7 +66,7 @@
     border: var(--thin-border) solid var(--aqua-splash);
 }
 #intro-logo-img {
-    width: calc(((8vw + 8vh) / 2) + 2em);
+    width: calc(((7vw + 7vh) / 2) + 2em);
     border-radius: calc(((2vw + 2vh) / 2) + 2em);
     max-width: 200px;
     margin: 0;
