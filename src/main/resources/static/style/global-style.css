@@ -150,6 +150,9 @@ nav {
 .dropdown-menu .dropdown-item:hover {
     background-color: var(--cloudy);
 }
+.dropdown-item {
+    margin: 0 !important;
+}
 #see-all-tools-text {
     font-style: italic;
     text-decoration: underline;
