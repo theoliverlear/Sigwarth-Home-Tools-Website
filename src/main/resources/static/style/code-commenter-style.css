@@ -4,7 +4,6 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 #title-section {
     display: flex;
@@ -44,7 +43,13 @@ main {
     color: var(--snowflake);
     margin: calc(((1.5vh + 1.5vw) / 2) + 0.5em) 0;
     padding: calc(((1.5vh + 1.5vw) / 2) + 0.5em) 0;
-
+}
+#settings-title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 #heading-type-div {
     display: flex;
@@ -54,7 +59,7 @@ main {
     width: 80%;
     background-color: var(--steel-teal);
     color: var(--snowflake);
-    padding: calc(((1vh + 1vw) / 2) + 0.25em) 0;
+    padding: calc(((0.125vh + 0.125vw) / 2) + 0.1em) 0;
 }
 #comment-type-dropdown {
     top: 100% !important;
@@ -69,7 +74,7 @@ main {
     background-color: var(--steel-teal);
     color: var(--snowflake);
     padding: 0;
-    margin: 0 calc((((0.5vw + 0.5vh) / 2) + 0.5em) + (((10vw + 10vh) / 2) + 3em)) calc(((0.5vw + 0.5vh) / 2) + 0.3em) 0;
+    margin: 0 calc((((0.5vw + 0.5vh) / 2) + 0.5em) + (((10vw + 10vh) / 2) + 3em)) calc(((0.25vw + 0.25vh) / 2) + 0.15em) 0;
 }
 #current-type-chosen-div {
     display: flex;
@@ -88,6 +93,12 @@ main {
     align-items: center;
     width: 100%;
     flex-direction: column;
+}
+#copy-to-clipboard-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
 }
 #heading-text-div {
     display: flex;
@@ -133,4 +144,10 @@ main {
     padding: 0 !important;
     font-size: calc(((1.2vw + 1.2vh) / 2) + 0.1em) !important;
     border-radius: 0 calc(((0.5vw + 0.5vh) / 2) + 0.25em) calc(((0.5vw + 0.5vh) / 2) + 0.25em) 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .header-output-option {
+        font-size: min(calc(((1vw + 1vh) / 2) + 5px), 24px) !important;
+    }
 }
