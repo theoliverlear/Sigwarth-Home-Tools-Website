@@ -1,5 +1,9 @@
 export class CarbItem {
-    constructor(servingWeight, weightUnitsMeasured, carbsPerServing, itemNumber) {
+    servingWeight: number;
+    unitsMeasured: number;
+    carbsPerServing: number;
+    itemNumber: number;
+    constructor(servingWeight: number, weightUnitsMeasured: number, carbsPerServing: number, itemNumber: number) {
         this.servingWeight = servingWeight;
         this.unitsMeasured = weightUnitsMeasured;
         this.carbsPerServing = carbsPerServing;
