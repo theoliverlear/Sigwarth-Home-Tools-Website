@@ -4,13 +4,13 @@ import {loadPage} from "./globalScript";
 
 $(document).ready(function() {
     if (loadPage(document.body, 'home')) {
+        let carousel = new bootstrap.Carousel(document.getElementById('features-section'));
         $('#features-section').swipe({
             swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                if (direction == 'left') $(this).carousel('next');
-                if (direction == 'right') $(this).carousel('prev');
+                if (direction == 'left') carousel.next();
+                if (direction == 'right') carousel.prev();
             },
             allowPageScroll: 'vertical'
         });
-        new bootstrap.Carousel(document.getElementById('features-section'));
     }
 });
