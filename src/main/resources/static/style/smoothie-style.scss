@@ -1,0 +1,93 @@
+@import "global-variables";
+@import "global-mixins";
+@import "global-functions";
+#title-section {
+    width: calc(((80vw + 80vh) / 2) + 3em);
+    @include flex(center, center, row);
+    max-width: min(1200px, 90vw);
+    margin: calc(((1.5vh + 1.5vw) / 2) + 0.25em) 0;
+    background-color: $steel-teal;
+    border-radius: calc((2.35vh + 2.35vw) / 2);
+    padding: calc(((0.5vh + 0.5vw) / 2) + 0.25em) calc(((1vh + 1vw) / 2) + 0.5em);
+    box-shadow: $cloudy calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em) 0 0;
+}
+#smoothie-word {
+    color: #FF7BAC;
+    /*color: var(--twilight-velvet);*/
+}
+
+.output-section {
+    width: 100%;
+    @include flex(center, center, column);
+    margin: calc(((1.5vh + 1.5vw) / 2) + 0.25em) 0;
+    background-color: $cloudy;
+    padding: calc(((1vh + 1vw) / 2) + 0.5em) 0;
+}
+#individual-items-div {
+    @include flex(space-around, center, row);
+    width: 100%;
+}
+.smoothie-item-status-div {
+    @include flex(center, center, row);
+}
+#smoothie-output-div {
+    @include flex(center, center, column);
+    margin: calc(((1.5vh + 1.5vw) / 2) + 0.25em) 0;
+}
+.smoothie-item-output {
+    @include flex(center, center, column);
+}
+#smoothie-input-section {
+    @include flex(center, center, column);
+    margin: 0 0 calc(((1.5vh + 1.5vw) / 2) + 0.25em) 0;
+}
+.smoothie-item-div {
+    @include flex(center, center, column);
+    margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em);
+    padding: calc(((0.5vh + 0.5vw) / 2) + 0.25em);
+    border: $very-thin-border solid $night-velvet;
+    border-radius: calc((2.35vh + 2.35vw) / 2);
+    width: calc(((23vh + 23vw) / 2) + 6em);
+    height: calc(((20vh + 20vw) / 2) + 6em);
+    background-color: $twilight-velvet;
+    color: $snowflake;
+    box-shadow: $cloudy calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em) 0 0;
+}
+.food-title-div {
+    @include flex(center, center, row);
+    margin: calc(((0.4vh + 0.4vw) / 2) + 0.2em) 0 calc(((0.2vh + 0.2vw) / 2) + 0.1em) 0;
+}
+.smoothie-icon {
+    width: calc(((9vh + 9vw) / 2) + 3em);
+    background-color: $snowflake;
+    border-radius: calc((2.35vh + 2.35vw) / 2);
+    padding: calc(((0.5vh + 0.5vw) / 2) + 0.25em);
+    border: $very-thin-border solid $aqua-splash;
+    box-shadow: $cloudy calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em) 0 0;
+}
+#carb-output-section {
+    @include flex(center, center, column);
+    margin: calc(((1.5vh + 1.5vw) / 2) + 0.25em) 0;
+    background-color: $steel-teal;
+    color: $snowflake;
+}
+#num-drink-title-div {
+    @include flex(center, center, row);
+    margin: 0 calc(((0.5vh + 0.5vw) / 2) + 0.25em) 0 0;
+}
+#num-drink-input-div {
+    @include flex(center, center, row);
+    margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em) 0;
+}
+#total-carb-output-div {
+    @include flex(center, center, row);
+    width: 100%;
+    margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em) 0;
+}
+#total-carb-output-text-div {
+    @include flex(center, center, row);
+    /*width: calc(((20vh + 20vw) / 2) + 10em);*/
+}
+#total-carb-output {
+    text-decoration: underline;
+}
