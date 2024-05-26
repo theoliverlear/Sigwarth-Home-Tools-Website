@@ -1,62 +1,34 @@
-/*
-- #FAFDFE - Snowflake
-- #D6E4EA - Cloudy
-- #B9CFD7 - Fog Grey
-- #8DD8DA - Aqua Splash
-- #5E8998 - Steel Teal
-- #53436B - Twilight Velvet
-- #2B314F - Night Velvet
-- #021F32 - Midnight Tide
-- #000E1A - Black Navy
- */
-:root {
-    --snowflake: #FAFDFE;
-    --cloudy: #D6E4EA;
-    --pure-grey: #d7d7d7;
-    --fog-grey: #B9CFD7;
-    --aqua-splash: #8DD8DA;
-    --steel-teal: #5E8998;
-    --twilight-velvet: #53436B;
-    --night-velvet: #2B314F;
-    --midnight-tide: #021F32;
-    --black-navy: #000E1A;
+@import "global-variables";
+@import "global-mixins";
+@import "global-functions";
 
-    --thin-border: calc(((0.05vw + 0.05vh) / 2) + 0.05em);
-}
 h1 {
     font-size: min(calc(((4.25vw + 4.25vh) / 2) + 10px), 60px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h2 {
     font-size: min(calc(((3.25vw + 3.25vh) / 2) + 9px), 50px)!important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h3 {
     font-size: min(calc(((2.5vw + 2.5vh) / 2) + 8px), 44px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h4 {
     font-size: min(calc(((2vw + 2vh) / 2) + 7px), 36px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h5 {
     font-size: min(calc(((1.5vw + 1.5vh) / 2) + 6px), 28px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 h6 {
     font-size: min(calc(((1vw + 1vh) / 2) + 5px), 24px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 p {
     font-size: calc(((1vw + 1vh) / 2) + 24px) !important;
-    margin: 0;
-    padding: 0;
+    @include basic-margin-padding(0, 0);
 }
 .link-no-style {
     text-decoration: none;
@@ -76,9 +48,8 @@ body {
     min-height: 100vh;
 }
 nav {
-    background-color: var(--snowflake);
-    margin: 0;
-    padding: 0;
+    background-color: $snowflake;
+    @include basic-margin-padding(0, 0);
     top: 0;
     left: 0;
     width: 100%;
@@ -87,8 +58,8 @@ nav {
     /*display: flex;*/
     /*justify-content: space-around;*/
     /*align-items: center;*/
-    border-bottom: calc(((0.05vw + 0.05vh) / 2) + 0.05em) solid var(--cloudy);
-    box-shadow: var(--cloudy) 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em);
+    border-bottom: $very-thin-border solid $cloudy;
+    box-shadow: $cloudy 0 0 calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.25vw + 0.25vh) / 2) + 0.25em);
     /*max-height: 200px;*/
 }
 #nav-bar {
@@ -124,8 +95,7 @@ nav {
 }
 
 .nav-bar-text {
-    padding: 0;
-    margin: 0;
+    @include basic-margin-padding(0, 0);
 }
 #dropdown-menu-button {
     font-size: min(calc(((1.5vw + 1.5vh) / 2) + 6px), 28px) !important;
@@ -140,15 +110,15 @@ nav {
     padding: 0 !important;
 }
 .dropdown-button {
-    background-color: var(--snowflake) !important;
+    background-color: $snowflake !important;
     border: none;
-    color: var(--black-navy) !important;
+    color: $black-navy !important;
     font-size: calc(((1vw + 1vh) / 2) + 5px) !important;
     font-weight: 500 !important;
     margin: 0 calc(((0.5vw + 0.5vh) / 2) + 0.5em) !important;
 }
 .dropdown-menu .dropdown-item:hover {
-    background-color: var(--cloudy);
+    background-color: $cloudy;
 }
 .dropdown-item {
     margin: 0 !important;
@@ -158,10 +128,7 @@ nav {
     text-decoration: underline;
 }
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex(center, center, column);
     width: 100%;
 }
 img {
@@ -170,29 +137,22 @@ img {
 code {
     font-size: calc(((1.4vw + 1.4vh) / 2) + 6px) !important;
     font-weight: 500 !important;
-    color: var(--steel-teal) !important;
+    color: $steel-teal !important;
 }
 .code-output-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, row);
     width: 90%;
     padding: calc(((0.05vh + 0.05vw) / 2) + 0.05em) calc(((0.5vh + 0.5vw) / 2) + 0.5em);
-    background-color: var(--pure-grey);
+    background-color: $pure-grey;
     border-radius: calc(((2.35vh + 2.35vw) / 2) + 0.5em);
     margin: calc(((0.5vh + 0.5vw) / 2) + 0.25em) 0;
 }
 .flexed-row-spaced {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(space-around, center, row);
     width: 100%;
 }
 .flexed-row-spaced-vertical {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    @include flex(space-around, center, column);
     width: 100%;
 }
 .carousel-control-prev-icon {
@@ -205,53 +165,51 @@ hr {
     margin: 0;
     width: 100%;
     border: none;
-    border-top: var(--thin-border) solid var(--black-navy);
+    border-top: $very-thin-border solid $black-navy;
 }
 .medium-button {
     width: calc(((11vw + 11vh) / 2) + 7em);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, row);
     padding: calc(((0.5vw + 0.5vh) / 2) + 0.5em) calc(((1vw + 1vh) / 2) + 1em);
     border-radius: calc(((0.75vw + 0.75vh) / 2) + 0.25em);
-    box-shadow: var(--fog-grey) calc(((0.15vw + 0.15vh) / 2) + 0.15em) calc(((0.15vw + 0.15vh) / 2) + 0.15em) 0 0;
+    box-shadow: $fog-grey calc(((0.15vw + 0.15vh) / 2) + 0.15em) calc(((0.15vw + 0.15vh) / 2) + 0.15em) 0 0;
     font-size: calc(((1vw + 1vh) / 2) + 5px);
     font-weight: 500;
-    background-color: var(--aqua-splash);
-    color: var(--black-navy);
-    border: var(--thin-border) solid var(--cloudy);
+    background-color: $aqua-splash;
+    color: $black-navy;
+    border: $very-thin-border solid $cloudy;
     transition: margin-bottom, margin-left, box-shadow, 0.3s;
+    &:hover {
+        box-shadow: $fog-grey calc(((0.2vw + 0.2vh) / 2) + 0.2em) calc(((0.2vw + 0.2vh) / 2) + 0.2em) 0 0;
+    }
+    &:active {
+        margin-bottom: calc((((0.2vw + 0.2vh) / 2) + 0.2em) * -1);
+        margin-left: calc(((0.2vw + 0.2vh) / 2) + 0.2em);
+        box-shadow: none;
+    }
 }
-.medium-button:hover {
-    box-shadow: var(--fog-grey) calc(((0.2vw + 0.2vh) / 2) + 0.2em) calc(((0.2vw + 0.2vh) / 2) + 0.2em) 0 0;
-}
-.medium-button:active {
-    margin-bottom: calc((((0.2vw + 0.2vh) / 2) + 0.2em) * -1);
-    margin-left: calc(((0.2vw + 0.2vh) / 2) + 0.2em);
-    box-shadow: none;
-}
+
 .small-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, row);
     padding: calc(((0.25vw + 0.25vh) / 2) + 0.25em) calc(((0.5vw + 0.5vh) / 2) + 0.5em);
     border-radius: calc(((0.5vw + 0.5vh) / 2) + 0.5em);
-    box-shadow: var(--fog-grey) calc(((0.1vw + 0.1vh) / 2) + 0.1em) calc(((0.1vw + 0.1vh) / 2) + 0.1em) 0 0;
+    box-shadow: $fog-grey calc(((0.1vw + 0.1vh) / 2) + 0.1em) calc(((0.1vw + 0.1vh) / 2) + 0.1em) 0 0;
     font-size: calc(((0.75vw + 0.75vh) / 2) + 3px);
     font-weight: 500;
-    background-color: var(--aqua-splash);
-    color: var(--black-navy);
-    border: var(--thin-border) solid var(--cloudy);
+    background-color: $aqua-splash;
+    color: $black-navy;
+    border: $very-thin-border solid $cloudy;
     transition: margin-bottom, margin-left, box-shadow, 0.3s;
+    &:hover {
+        box-shadow: $fog-grey calc(((0.15vw + 0.15vh) / 2) + 0.15em) calc(((0.15vw + 0.15vh) / 2) + 0.15em) 0 0;
+    }
+    &:active {
+        margin-bottom: calc((((0.15vw + 0.15vh) / 2) + 0.15em) * -1);
+        margin-left: calc(((0.15vw + 0.15vh) / 2) + 0.15em);
+        box-shadow: none;
+    }
 }
-.small-button:hover {
-    box-shadow: var(--fog-grey) calc(((0.15vw + 0.15vh) / 2) + 0.15em) calc(((0.15vw + 0.15vh) / 2) + 0.15em) 0 0;
-}
-.small-button:active {
-    margin-bottom: calc((((0.15vw + 0.15vh) / 2) + 0.15em) * -1);
-    margin-left: calc(((0.15vw + 0.15vh) / 2) + 0.15em);
-    box-shadow: none;
-}
+
 .input-div {
     width: calc(((20vw + 20vh) / 2) + 10em) !important;
     height: calc(((1.25vw + 1.25vh) / 2) + 1em) !important;
@@ -261,12 +219,12 @@ footer {
 }
 @media (min-width: 992px) {
     .nav-bar-item {
-        border-right: var(--thin-border) solid var(--black-navy);
+        border-right: $very-thin-border solid $black-navy;
         padding: 0 calc(((0.5vw + 0.5vh) / 2) + 0.5em);
     }
     .nav-bar-end-item {
         padding: 0 calc(((0.5vw + 0.5vh) / 2) + 0.5em);
-        border-left: var(--thin-border) solid var(--black-navy);
+        border-left: $very-thin-border solid $black-navy;
     }
 }
 @media (max-width: 991px) {
