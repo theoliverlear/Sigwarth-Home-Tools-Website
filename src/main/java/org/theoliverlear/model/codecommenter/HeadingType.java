@@ -4,6 +4,7 @@ public enum HeadingType {
     THIN("//", "", "-"),
     THICK("//", "", "="),
     HTML("<!--", "-->", "-"),
+    HTML_THICK("<!--", "-->", "="),
     CSS("/*", "*/", "-"),
     CSS_THICK("/*", "*/", "="),
     THIN_HASH("#", "", "-"),
@@ -21,6 +22,7 @@ public enum HeadingType {
             case "THIN" -> HeadingType.THIN;
             case "THICK" -> HeadingType.THICK;
             case "HTML" -> HeadingType.HTML;
+            case "HTML_THICK" -> HeadingType.HTML_THICK;
             case "CSS" -> HeadingType.CSS;
             case "CSS_THICK" -> HeadingType.CSS_THICK;
             case "THIN_HASH" -> HeadingType.THIN_HASH;
