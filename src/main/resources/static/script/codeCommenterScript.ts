@@ -66,6 +66,8 @@ function headingContentToName(textContent: string): string {
             return 'THICK';
         case '<!--------Heading------->':
             return 'HTML';
+        case '<!--=====-Heading-=====->':
+            return 'HTML_THICK';
         case '#---------Heading--------':
             return 'THIN_HASH';
         case '#========-Heading-=======':
