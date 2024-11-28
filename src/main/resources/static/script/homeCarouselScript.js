@@ -7,8 +7,8 @@ $(document).ready(function() {
         let carousel = new bootstrap.Carousel(document.getElementById('features-section'));
         $('#features-section').swipe({
             swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                if (direction == 'left') carousel.next();
-                if (direction == 'right') carousel.prev();
+                if (direction === 'left') carousel.next();
+                if (direction === 'right') carousel.prev();
             },
             allowPageScroll: 'vertical'
         });
