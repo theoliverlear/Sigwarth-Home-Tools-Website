@@ -1,0 +1,12 @@
+<!-- salad-ingredient.component.html -->
+<ng-container>
+    <div class="image-name-div">
+        <ss-img [imageAsset]="getImageAsset()"/>
+        <ss-title class="salad-type-title"
+                  [tagType]="TagType.H4"
+                  [text]="type + ': '"/>
+    </div>
+    <ss-title class="grams-title"
+              [tagType]="TagType.H4"
+              [text]="grams + 'g'"/>
+</ng-container>
