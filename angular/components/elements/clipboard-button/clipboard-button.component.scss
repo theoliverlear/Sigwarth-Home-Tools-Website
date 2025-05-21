@@ -1,0 +1,13 @@
+// clipboard-button.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+clipboard-button {
+    @include flex(center, center, row);
+    margin: $one-percent 0 0 0;
+    ss-button {
+        min-width: $twenty-percent;
+    }
+}
