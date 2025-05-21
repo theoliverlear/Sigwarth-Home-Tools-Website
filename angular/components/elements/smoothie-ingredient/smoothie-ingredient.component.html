@@ -1,0 +1,6 @@
+<!-- smoothie-ingredient.component.html -->
+<ng-container>
+    <ss-img [imageAsset]="IngredientType.getImageAsset(type)"/>
+    <ss-title [text]="weightStatus" [tagType]="TagType.H5"/>
+    <ss-title [text]="getPercentageRecommendation()" [tagType]="TagType.H6"/>
+</ng-container>
