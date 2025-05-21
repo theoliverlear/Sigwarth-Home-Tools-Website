@@ -1,0 +1,14 @@
+<!-- smoothie-builder.component.html -->
+<ng-container>
+    <div class="smoothie-title-div">
+        <ss-title [tagType]="TagType.H1" [text]="'Smoothie Builder'"/>
+        <subtitle [tagType]="TagType.H4" [text]="'Create Davy\'s World Famous Smoothies!'"/>
+    </div>
+    <smoothie [smoothie]="smoothie"/>
+    <smoothie-input-carousel [smoothie]="smoothie"
+            (smoothieInputChange)="setSmoothieWeights($event)"/>
+    <div class="drinks-and-carbs-div">
+        <smoothie-carbs [carbs]="smoothie.carbsPerDrink"/>
+        <smoothie-drinks-input (numDrinksChange)="setNumDrinks($event)"/>
+    </div>
+</ng-container>
