@@ -1,0 +1,15 @@
+<ng-container>
+    <ngb-carousel
+            *ngIf="carouselTools && carouselTools.length"
+            [showNavigationArrows]="true"
+            [showNavigationIndicators]="true"
+            [interval]="5000"
+            [pauseOnHover]="true"
+            [keyboard]="true"
+            [wrap]="true"
+            [activeId]="'0'">
+        <ng-template ngbSlide *ngFor="let tool of tools; let i = index">
+            <carousel-tool [tool]="tool"/>
+        </ng-template>
+    </ngb-carousel>
+</ng-container>
