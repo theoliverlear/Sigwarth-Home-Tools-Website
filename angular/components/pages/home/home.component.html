@@ -1,0 +1,18 @@
+<!-- home.component.html -->
+<ng-container>
+    <section id="headline-section">
+        <div class="picture-with-description">
+            <div class="picture-greeting">
+                <ss-title [text]="'Welcome!'" [tagType]="TagType.H2"/>
+                <ss-img [imageAsset]="logoImageAsset"/>
+            </div>
+            <ss-paragraph [text]="homeToolsDescription"/>
+        </div>
+        <hr/>
+        <div id="title-div">
+            <ss-title id="home-tools-title" [text]="'Sigwarth Home Tools'" [tagType]="TagType.H1"/>
+            <subtitle [text]="'Tools for my home... and yours too!'" [tagType]="TagType.H4"/>
+        </div>
+    </section>
+    <tool-carousel/>
+</ng-container>
