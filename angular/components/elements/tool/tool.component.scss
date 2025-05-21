@@ -1,0 +1,47 @@
+// tool.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+tool {
+    @include flex(space-around, center, row);
+    width: 95%;
+    padding: $one-percent;
+    @extend %soft-border-radius;
+    background-image: radial-gradient(at bottom, $alabaster-stone, $snowflake);
+    box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.25, 0.25);
+    margin: $one-percent 0;
+    .text-content-div {
+        @include flex(space-around, center, column);
+        max-width: 55%;
+        .tool-title {
+            margin: $one-percent 0;
+            @extend %soft-border-radius;
+            padding: $one-percent;
+            background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+            @extend %gray-box-shadow-with-effects;
+        }
+    }
+    ss-img {
+        @include square-size($twenty-percent);
+        @extend %soft-border-radius;
+        @extend %gray-box-shadow-with-effects;
+        background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+        padding: $one-percent;
+    }
+}
+@media (max-width: 768px) {
+    tool {
+        @include flex(center, center, column);
+        width: 90%;
+        padding: $one-percent;
+        .text-content-div {
+            @include flex(space-around, center, column);
+            max-width: 100%;
+        }
+        ss-img {
+            @include square-size($fifteen-percent);
+        }
+    }
+}
