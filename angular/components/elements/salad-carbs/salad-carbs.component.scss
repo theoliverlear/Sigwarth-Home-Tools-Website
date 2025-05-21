@@ -1,0 +1,17 @@
+// salad-carbs.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+salad-carbs {
+    @include flex(center, center, row);
+    padding: $one-percent;
+    @extend %soft-border-radius;
+    background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+    box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.25, 0.25);
+    ss-title h4 {
+        color: $almost-white;
+        text-align: center;
+    }
+}
