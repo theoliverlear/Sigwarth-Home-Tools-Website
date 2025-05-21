@@ -1,0 +1,18 @@
+// heading-output.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+comment-heading-output {
+    @include flex(center, center, row);
+    min-width: 90%;
+    max-width: 98%;
+    background-image: linear-gradient(to bottom, $pure-gray 40%, $black-shadow, $cloudy);
+
+    padding: $half-percent $one-percent;
+    border-radius: $one-percent;
+    ss-title {
+        color: $mixed-blue;
+    }
+}
