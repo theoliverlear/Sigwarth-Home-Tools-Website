@@ -1,0 +1,46 @@
+// salad-input.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+salad-input {
+    @include flex(space-between, center, row);
+    width: 100%;
+    height: $four-half-percent;
+    @extend %soft-border-radius;
+    background-image: linear-gradient(to bottom, $tree-green, $modern-green, $tea-green);
+    #lettuce-label-title {
+        margin: 0 0 0 $one-percent;
+        h4 {
+            text-decoration: underline;
+            color: $pure-white;
+        }
+    }
+    ss-input {
+        height: $two-percent;
+        margin: 0 $quarter-percent;
+        width: $five-percent;
+        input {
+            height: 100%;
+
+        }
+    }
+    .input-end-div {
+        @include flex(center, center, row);
+        ss-img {
+            @include square-size($three-percent);
+            background-color: $pure-white;
+            padding: $quarter-percent;
+            border-radius: $half-percent;
+            margin-right: $one-percent;
+        }
+        ss-title {
+            margin-right: $one-percent;
+            h4 {
+                text-align: left;
+                color: $pure-white;
+            }
+        }
+    }
+}
