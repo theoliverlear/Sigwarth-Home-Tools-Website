@@ -1,0 +1,23 @@
+// smoothie-drinks-input.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-drinks-input {
+    @include flex(center, center, column);
+    //@extend %black-reflection-text-underlined;
+    font-size: $h4-font-size;
+    margin: $three-quarter-percent 0;
+    @extend %soft-border-radius;
+    //@extend %simple-box-shadow;
+    //border: $very-thin-border $blue-gray solid;
+    //box-shadow: $hot-pink 0 0 $half-percent simple-calc(0.25, 0.25);
+    @extend %softest-raise-above-box-shadow;
+    padding: $one-percent;
+    //background-image: radial-gradient(at bottom, $mixed-blue, $aqua-splash);
+    background-image: radial-gradient(circle at 50% 50%, $black-shadow, $darker-black-shadow);
+    ss-input input {
+        text-align: center;
+    }
+}
