@@ -1,0 +1,37 @@
+// carousel-tool.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+carousel-tool {
+    @include flex(center, center, column);
+    height: 100%;
+    width: $twenty-five-percent;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: background-color, 0.3s;
+    padding: $three-quarter-percent;
+    @extend %soft-border-radius;
+    ss-img {
+        @include square-size($ten-percent);
+        margin: 0 0 $one-percent 0;
+    }
+    ss-title {
+        @include flex(center, center, column);
+        //background-color: $pure-white;
+        background-image: linear-gradient(to bottom, $pure-white, $alabaster-stone);
+        padding: $three-quarter-percent;
+        @extend %soft-border-radius;
+        h4 {
+            margin: 0;
+        }
+        box-shadow: $darker-black-shadow 0 0 $quarter-percent $quarter-percent;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: $faded-neutral-black;
+    }
+}
