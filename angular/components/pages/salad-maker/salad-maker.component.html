@@ -1,0 +1,6 @@
+<!-- salad-maker.component.html -->
+<ng-container>
+    <ss-title id="salad-maker-title" [text]="'Salad Maker'" [tagType]="TagType.H1"/>
+    <salad-input (inputEvent)="sendSaladToServer($event)"/>
+    <salad [salad]="salad"/>
+</ng-container>
