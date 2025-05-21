@@ -1,0 +1,8 @@
+<!-- salad.component.html -->
+<ng-container>
+    <div class="top-container">
+        <salad-ingredient-list [salad]="salad"/>
+        <ss-img class="salad-img" [imageAsset]="saladToolImageAsset"/>
+    </div>
+    <salad-carbs [carbs]="salad.carbs"/>
+</ng-container>
