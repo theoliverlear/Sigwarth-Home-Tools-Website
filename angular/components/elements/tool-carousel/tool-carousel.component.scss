@@ -1,0 +1,21 @@
+// carousel-style.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+
+tool-carousel {
+    @include flex(center, center, column);
+    @import "bootstrap/scss/bootstrap";
+    width: 100%;
+    height: $nineteen-percent;
+    background-color: $faded-morning-frost-blue;
+    margin: $one-percent 0;
+    padding: $one-percent 0;
+    ngb-carousel {
+        @include flex(center, center, column);
+        width: 100%;
+        height: 100%;
+    }
+}
