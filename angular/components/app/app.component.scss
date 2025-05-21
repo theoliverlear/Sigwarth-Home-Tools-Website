@@ -1,0 +1,102 @@
+//=================================-Imports-==================================
+@import "../../styles/global-variables";
+@import "../../styles/global-mixins";
+@import "../../styles/global-functions";
+@import "../../styles/global-placeholders";
+//==================================-Styles-==================================
+
+//----------------------------General-Text-Content----------------------------
+h1 {
+    font-size: $h1-font-size;
+    @include basic-margin-padding(0, 0);
+}
+h2 {
+    font-size: $h2-font-size;
+    @include basic-margin-padding(0, 0);
+}
+h3 {
+    font-size: $h3-font-size;
+    @include basic-margin-padding(0, 0);
+}
+h4 {
+    font-size: $h4-font-size;
+    @include basic-margin-padding(0, 0);
+}
+h5 {
+    font-size: $h5-font-size;
+    @include basic-margin-padding(0, 0);
+}
+h6 {
+    font-size: $h6-font-size;
+    @include basic-margin-padding(0, 0);
+}
+p {
+    font-size: $p-font-size;
+    @include basic-margin-padding(0, 0);
+}
+span {
+    font-size: $p-font-size;
+    @include basic-margin-padding(0, 0);
+}
+code {
+
+}
+body {
+    @include flex(center, center, column);
+    @include square-size(100%);
+    @include basic-margin-padding(0, 0);
+    min-height: 100vh;
+    app {
+        width: 100%;
+        @include flex(center, center, column);
+        @include basic-margin-padding(0, 0);
+        min-height: 100vh;
+        //max-height: 100vh;
+        background: linear-gradient(0deg, $alabaster-stone, $pure-white, $almost-white);
+        font-family: $jetbrains-mono-font;
+        overflow: auto;
+        //background-size: 200% 200%;
+        // center the background gradient
+        background-position: center;
+        //animation: shifting-gradient 50s infinite ease-in-out;
+        //flex-grow: 1;
+
+        main {
+            width: 100%;
+            flex: 1;
+            @include flex(center, center, column);
+        }
+        .scroll-container {
+            @include flex(flex-start, flex-start, column);
+            //@extend %nav-bar-padding-top;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: scroll;
+            height: auto;
+            flex: 1;
+        }
+        carb-calculator, code-commenter, home, salad-maker, smoothie-builder {
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1;
+        }
+    }
+}
+hr {
+    width: 80%;
+    border: $thinnest-border solid $pure-white;
+    border-image: radial-gradient(at center, $alabaster-stone 30%, $pure-white) 1;
+    box-shadow: 0 calc($eighth-percent / 4) calc($eighth-percent / 2) calc($eighth-percent / 2) $faded-neutral-black;
+    border-radius: $eighth-percent;
+}
+@keyframes shifting-gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
