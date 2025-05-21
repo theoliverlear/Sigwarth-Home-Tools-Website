@@ -1,0 +1,119 @@
+// code-commenter.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+code-commenter {
+    @include flex(flex-start, center, column);
+    .code-commenter-title-div {
+        margin: $one-percent 0;
+        padding: $half-percent;
+        background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+        box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.25, 0.25);
+        @extend %soft-border-radius;
+        ss-title h1 {
+            color: $almost-white;
+        }
+        subtitle h4 {
+            background: -webkit-linear-gradient($cloudy, $charcoal, $blue-gray);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: underline;
+            text-decoration-color: $charcoal;
+            text-decoration-thickness: 0.1em;
+        }
+    }
+    .code-commenter-settings-div {
+        @include flex(center, center, column);
+        background-image: linear-gradient(to right, $morning-frost-blue, $muted-blue, $mixed-blue);
+        width: 100%;
+        @extend %softest-raise-above-box-shadow;
+        padding: $one-percent 0 $two-percent 0;
+        margin: $two-percent 0;
+        ss-title {
+            margin: $half-percent 0;
+            h3, h4 {
+                background: -webkit-linear-gradient(black, $charcoal, $blue-gray);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h3 {
+                background: -webkit-linear-gradient(black, $charcoal, $blue-gray);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-decoration: underline;
+                text-decoration-color: $charcoal;
+                text-decoration-thickness: 0.1em;
+            }
+        }
+        hr {
+            margin: $one-half-percent 0 $half-percent 0;
+            width: 97%;
+            border-image: radial-gradient(at center, $pure-gray 30%, $pure-white) 1;
+        }
+        dropdown {
+            max-width: 98%;
+            width: calc($twenty-five-percent * 1.1);
+            ss-select {
+                max-width: 98%;
+                width: calc($twenty-five-percent * 1.1);
+            }
+        }
+        .heading-input-div {
+            width: 100%;
+            .heading-input-with-button {
+                @include flex(center, center, row);
+                width: 100%;
+                ss-input {
+                    input {
+                        text-align: center;
+                    }
+                }
+                ss-img {
+                    box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.1, 0.1);
+                    transition: box-shadow, transform 0.3s;
+                    &:hover {
+                        //box-shadow: $darker-black-shadow 0 0 $one-percent simple-calc(0.18, 0.18);
+                        transform: scale(1.05);
+                        cursor: pointer;
+                    }
+                    &:active {
+                        //box-shadow: $darker-black-shadow 0 0 $one-percent simple-calc(0.2, 0.2);
+                        transform: scale(1);
+                    }
+                }
+                ss-input {
+                    margin-left: calc($two-percent + $half-percent + $one-percent);
+                    input {
+                        width: calc($twenty-five-percent * 0.97);
+                        height: $two-half-percent;
+                    }
+                }
+                ss-img {
+                    background-color: $navy-blue;
+                    border-radius: 50%;
+                    padding: $half-percent;
+                    margin-left: $one-percent;
+                    @include square-size(calc($one-half-percent * 1.05));
+                }
+            }
+        }
+    }
+}
+// if mobile screen ss-img in input div is smaller, comment-heading-output ss-title has font-size decreased
+@media screen and (max-width: 450px) {
+    .code-commenter-settings-div {
+        .heading-input-div {
+            .heading-input-with-button {
+                ss-input {
+                    width: calc($twenty-five-percent * 0.92);
+                }
+                ss-img {
+                    margin-left: $half-percent;
+                    @include square-size(calc($one-percent * 1.2));
+                }
+            }
+        }
+    }
+}
