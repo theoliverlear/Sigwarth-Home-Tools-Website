@@ -1,0 +1,15 @@
+// tool-keyword.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+tool-keyword {
+    @include flex(center, center, row);
+    background-color: $aqua-splash;
+    @extend %soft-border-radius;
+    padding: $half-percent;
+    min-width: $ten-percent;
+    margin: $quarter-percent;
+
+}
