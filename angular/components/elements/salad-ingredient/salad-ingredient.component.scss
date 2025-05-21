@@ -1,0 +1,29 @@
+// salad-ingredient.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+salad-ingredient {
+    @include flex(space-between, center, row);
+    width: 100%;
+    margin: $half-percent 0;
+    .grams-title {
+        @include flex(flex-end, center, row);
+        font-size: $h4-font-size;
+        min-width: 4ch;
+        h4 {
+            text-align: right;
+        }
+    }
+    .image-name-div {
+        @include flex(center, center, row);
+        ss-img {
+            @include square-size($three-percent);
+            background-color: $pure-white;
+            padding: $quarter-percent;
+            border-radius: $half-percent;
+            margin-right: $one-percent;
+        }
+    }
+}
