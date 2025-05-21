@@ -1,0 +1,7 @@
+<!-- tools-dropdown.component.html -->
+<ng-container>
+    <nav-item [elementLink]="toolsElementLink" [isDropdown]="true"/>
+    <div *ngIf="toolsShown" class="tools-div" #toolsDiv>
+        <tools-dropdown-item *ngFor="let elementLink of toolsElementLinks" [toolLink]="elementLink"/>
+    </div>
+</ng-container>
