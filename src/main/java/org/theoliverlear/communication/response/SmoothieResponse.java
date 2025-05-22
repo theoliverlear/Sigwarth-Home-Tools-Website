@@ -1,18 +1,18 @@
-package org.theoliverlear.communication;
+package org.theoliverlear.communication.response;
 
 import lombok.Data;
 import org.theoliverlear.model.smoothie.Smoothie;
 
 @Data
 public class SmoothieResponse {
-    String smoothieStatus;
-    String appleJuiceStatus;
-    String yogurtStatus;
-    String frozenFruitStatus;
-    int appleJuicePercentage;
-    int yogurtPercentage;
-    int frozenFruitPercentage;
-    int carbsPerDrink;
+    private String smoothieStatus;
+    private String appleJuiceStatus;
+    private String yogurtStatus;
+    private String frozenFruitStatus;
+    private int appleJuicePercentage;
+    private int yogurtPercentage;
+    private int frozenFruitPercentage;
+    private int carbsPerDrink;
     public SmoothieResponse(String smoothieStatus, String appleJuiceStatus, String yogurtStatus, String frozenFruitStatus,
                             int appleJuicePercentage, int yogurtPercentage, int frozenFruitPercentage, int carbsPerDrink) {
         this.smoothieStatus = smoothieStatus;
