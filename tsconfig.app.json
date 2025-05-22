@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./",
+    "types": []
+  },
+  "files": [
+    "angular/modules/sigwarth-home-tools.module.ts"
+  ],
+  "include": [
+    "angular/**/*.d.ts"
+  ]
+}
