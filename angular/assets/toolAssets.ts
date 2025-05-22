@@ -1,7 +1,7 @@
 import {Tool} from "../models/tool/types";
 import {
     codeCommenterToolImageAsset,
-    saladToolImageAsset
+    saladToolImageAsset, smoothieToolImageAsset
 } from "./imageAssets";
 import {
     codeCommenterElementLink,
@@ -33,7 +33,7 @@ export const smoothieBuilderDescription: string = `The Smoothie Builder is a too
 export const smoothieBuilderTool: Tool = {
     name: "Smoothie Builder",
     description: smoothieBuilderDescription,
-    imageAsset: saladToolImageAsset,
+    imageAsset: smoothieToolImageAsset,
     keywords: ["Food", "Portions", "Balancer", "Recipe"],
     elementLink: smoothieElementLink
 };
