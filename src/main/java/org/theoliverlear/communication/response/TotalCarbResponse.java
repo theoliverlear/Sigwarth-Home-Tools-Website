@@ -1,4 +1,4 @@
-package org.theoliverlear.communication;
+package org.theoliverlear.communication.response;
 
 import lombok.Data;
 
