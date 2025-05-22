@@ -1,0 +1,28 @@
+// tools.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+tools {
+    @include flex(flex-start, center, column);
+    width: 100%;
+    .tools-title-div {
+        margin: $one-percent 0;
+        padding: $one-percent;
+        background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+        box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.25, 0.25);
+        @extend %soft-border-radius;
+        ss-title h1 {
+            color: $almost-white;
+        }
+        subtitle h4 {
+            background: -webkit-linear-gradient($cloudy, $charcoal, $blue-gray);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: underline;
+            text-decoration-color: $charcoal;
+            text-decoration-thickness: 0.1em;
+        }
+    }
+}

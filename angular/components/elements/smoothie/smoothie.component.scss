@@ -1,0 +1,15 @@
+// smoothie.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie {
+    @include flex(center, center, column);
+    width: 100%;
+    //background-image: linear-gradient(to bottom, $morning-frost-blue, $mixed-blue, $morning-frost-blue);
+    background-color: $morning-frost-blue;
+    padding: $one-percent 0;
+    margin: $one-percent 0;
+    @extend %softest-raise-above-box-shadow;
+}

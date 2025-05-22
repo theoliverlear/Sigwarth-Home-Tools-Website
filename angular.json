@@ -1,0 +1,187 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sigwarth-home-tools": {
+      "root": "",
+      "sourceRoot": "",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "build",
+            "index": "angular/index.html",
+            "main": "angular/main.ts",
+            "polyfills": "angular/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "aot": false,
+            "baseHref": "/",
+            "deployUrl": "/",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "angular/assets",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [
+              "angular/components/app/app.component.css",
+              "angular/components/elements/carousel-tool/carousel-tool.component.css",
+              "angular/components/elements/clipboard-button/clipboard-button.component.css",
+              "angular/components/elements/comment-heading-example/comment-heading-example.component.css",
+              "angular/components/elements/comment-heading-output/comment-heading-output.component.css",
+              "angular/components/elements/home-anchor/home-anchor.component.css",
+              "angular/components/elements/indent-input/indent-input.component.css",
+              "angular/components/elements/nav-bar/nav-bar.component.css",
+              "angular/components/elements/nav-item/nav-item.component.css",
+              "angular/components/elements/salad-carbs/salad-carbs.component.css",
+              "angular/components/elements/salad-ingredient-list/salad-ingredient-list.component.css",
+              "angular/components/elements/salad-ingredient/salad-ingredient.component.css",
+              "angular/components/elements/salad-input/salad-input.component.css",
+              "angular/components/elements/salad/salad.component.css",
+              "angular/components/elements/smoothie-carbs/smoothie-carbs.component.css",
+              "angular/components/elements/smoothie-drinks-input/smoothie-drinks-input.component.css",
+              "angular/components/elements/smoothie-ingredient-list/smoothie-ingredient-list.component.css",
+              "angular/components/elements/smoothie-ingredient/smoothie-ingredient.component.css",
+              "angular/components/elements/smoothie-input-carousel/smoothie-input-carousel.component.css",
+              "angular/components/elements/smoothie-input/smoothie-input.component.css",
+              "angular/components/elements/smoothie-status/smoothie-status.component.css",
+              "angular/components/elements/smoothie/smoothie.component.css",
+              "angular/components/elements/ss-anchor/ss-anchor.component.css",
+              "angular/components/elements/ss-button/ss-button.component.css",
+              "angular/components/elements/ss-footer/ss-footer.component.css",
+              "angular/components/elements/ss-img/ss-img.component.css",
+              "angular/components/elements/ss-input/ss-input.component.css",
+              "angular/components/elements/ss-paragraph/ss-paragraph.component.css",
+              "angular/components/elements/ss-select/ss-select.component.css",
+              "angular/components/elements/ss-title/ss-title.component.css",
+              "angular/components/elements/subtitle/subtitle.component.css",
+              "angular/components/elements/tool-carousel/tool-carousel.component.css",
+              "angular/components/elements/tool-keyword-list/tool-keyword-list.component.css",
+              "angular/components/elements/tool-keyword/tool-keyword.component.css",
+              "angular/components/elements/tool-list/tool-list.component.css",
+              "angular/components/elements/tool/tool.component.css",
+              "angular/components/elements/tools-dropdown-item/tools-dropdown-item.component.css",
+              "angular/components/elements/tools-dropdown/tools-dropdown.component.css",
+              "angular/components/pages/carb-counter/carb-counter.component.css",
+              "angular/components/pages/code-commenter/code-commenter.component.css",
+              "angular/components/pages/home/home.component.css",
+              "angular/components/pages/salad-maker/salad-maker.component.css",
+              "angular/components/pages/smoothie-builder/smoothie-builder.component.css",
+              "angular/components/pages/tools/tools.component.css"
+            ],
+            "scripts": [],
+            "fileReplacements": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "angular/environments/environment.ts",
+                  "with": "angular/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "none",
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "angular/environments/environment.ts",
+                  "with": "angular/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "sigwarth-home-tools:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "sigwarth-home-tools:build:production"
+            },
+            "development": {
+              "buildTarget": "sigwarth-home-tools:build:development"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sigwarth-home-tools:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "angular/test/test.ts",
+            "polyfills": "angular/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "angular/assets"
+            ],
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "sigwarth-home-tools:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sigwarth-home-tools:serve:production"
+            },
+            "development": {
+              "devServerTarget": "sigwarth-home-tools:serve:development"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<!-- tool.component.html -->
+<ng-container>
+    <div class="text-content-div">
+        <ss-title class="tool-title"
+                  (click)="navigateToTool()"
+                  [tagType]="TagType.H2"
+                  [text]="tool.name"/>
+        <ss-paragraph [text]="tool.description"/>
+        <tool-keyword-list [keywords]="tool.keywords"/>
+    </div>
+    <ss-img [imageAsset]="tool.imageAsset" (click)="navigateToTool()"/>
+</ng-container>

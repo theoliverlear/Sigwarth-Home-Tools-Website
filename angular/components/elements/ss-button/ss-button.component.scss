@@ -1,0 +1,28 @@
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+ss-button {
+    @include flex(center, center, row);
+    padding: calc($one-percent);
+    background-color: $aqua-splash;
+    border-radius: $half-percent;
+    ss-title {
+        text-shadow: none;
+    }
+    box-shadow: $pure-gray $third-percent $third-percent 0 0;
+    transition: background-color, box-shadow, transform, 0.25s;
+    ss-img {
+        @include square-size(calc($two-percent * 0.96));
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: $pure-gray $half-percent $half-percent 0 0;
+    }
+    &:active {
+        cursor: pointer;
+        box-shadow: none;
+        transform: translate($third-percent, $third-percent);
+    }
+}

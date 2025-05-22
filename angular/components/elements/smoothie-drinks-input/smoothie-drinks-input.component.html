@@ -1,0 +1,7 @@
+<!-- smoothie-drinks-input.component.html -->
+<ng-container>
+    <ss-title [text]="'Number of Drinks'" [tagType]="TagType.H4"/>
+    <ss-input [inputType]="InputType.NUMBER"
+              (inputEvent)="emitNumDrinksChange($event)"
+              [value]="2"/>
+</ng-container>

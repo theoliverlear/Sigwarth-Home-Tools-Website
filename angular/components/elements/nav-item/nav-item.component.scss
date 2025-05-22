@@ -1,0 +1,39 @@
+// nav-item.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+nav-item {
+    @include flex(center, center, row);
+    padding: $one-percent;
+    border-radius: $one-percent;
+    background-image: radial-gradient($pure-white, $alabaster-stone);
+    flex-basis: calc($eight-percent * 1.02);
+    box-shadow: none;
+    background-color: transparent;
+    transition: box-shadow, background-color, 0.15s;
+    text-align: center;
+    &:hover {
+        box-shadow: $morning-frost-blue 0 $eighth-percent $eighth-percent $eighth-percent;
+    }
+    ss-img {
+        position: relative;
+        @include square-size($one-percent);
+        left: $three-quarter-percent;
+    }
+    &:active {
+        cursor: pointer;
+        background-image: none;
+        background-color: $morning-frost-blue;
+        box-shadow: $morning-frost-blue 0 $eighth-percent $quarter-percent $quarter-percent;
+    }
+    @media screen and (min-width: 600px) {
+        padding: $one-percent $three-quarter-percent;
+        ss-anchor {
+            h5 {
+                font-size: calc($h5-font-size * 0.9);
+            }
+        }
+    }
+}

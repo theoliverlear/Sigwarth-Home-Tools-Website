@@ -1,5 +1,10 @@
 package org.theoliverlear.model.codecommenter;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Heading {
     //============================-Variables--================================
     private HeadingType headingType;
@@ -84,37 +89,5 @@ public class Heading {
             }
         }
         return normalizedHeading.toString();
-    }
-    //=============================-Getters-==================================
-    public HeadingType getHeadingType() {
-        return this.headingType;
-    }
-    public String getText() {
-        return this.text;
-    }
-    public boolean getIsIndentCorrected() {
-        return this.isIndentCorrected;
-    }
-    public Editor getEditor() {
-        return this.editor;
-    }
-    public String getComment() {
-        return this.comment;
-    }
-    //=============================-Setters-==================================
-    public void setHeadingType(HeadingType headingType) {
-        this.headingType = headingType;
-    }
-    public void setText(String text) {
-        this.text = text;
-    }
-    public void setIsIndentCorrected(boolean isIndentCorrected) {
-        this.isIndentCorrected = isIndentCorrected;
-    }
-    public void setEditor(Editor editor) {
-        this.editor = editor;
-    }
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 }

@@ -1,0 +1,35 @@
+// smoothie-builder.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-builder {
+    @include flex(flex-start, center, column);
+    .smoothie-title-div {
+        padding: $one-percent;
+        margin: $one-percent 0;
+        max-width: 90%;
+        @extend %color-bloom-gradient-background-with-text;
+        @extend %soft-border-radius;
+        @extend %simple-box-shadow;
+        subtitle {
+            background-image: linear-gradient(to bottom, $light-charcoal 60%, $charcoal 60%);
+            @extend %soft-border-radius;
+            padding: $one-percent;
+            h4 {
+                background: -webkit-linear-gradient($hot-pink, $purple-sprite);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    .drinks-and-carbs-div {
+        @extend %color-bloom-gradient-background;
+        @extend %soft-border-radius;
+        @extend %simple-box-shadow;
+        padding: $one-percent;
+        margin: $one-percent 0;
+        @include flex(center, center, column);
+    }
+}

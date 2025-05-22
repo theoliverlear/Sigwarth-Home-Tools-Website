@@ -1,0 +1,21 @@
+<!-- smoothie-input.component.html -->
+<ng-container>
+    <div class="input-container">
+        <ss-img [imageAsset]="IngredientType.getImageAsset(inputType.type)"/>
+        <ss-title class="ingredient-type-title"
+                  [tagType]="TagType.H4" [text]="inputType.type"/>
+        <div class="weight-div">
+            <ss-title [tagType]="TagType.H6" [text]="'Weight'"/>
+            <ss-title class="weight-type-title"
+                      [tagType]="TagType.H6"
+                      [text]="getWeightTypeString()"/>
+
+        </div>
+        <ss-input [inputType]="InputType.NUMBER"
+                  [placeholder]="'0'"
+                  [value]="0"
+                  (inputEvent)="emitInputChange($event)"/>
+        <ss-title class="percentage-title"
+                [text]="getPercentageString()" [tagType]="TagType.H6"/>
+    </div>
+</ng-container>

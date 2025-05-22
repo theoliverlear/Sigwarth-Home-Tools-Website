@@ -1,0 +1,14 @@
+// smoothie-carbs.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-carbs {
+    @include flex(center, center, row);
+    background-image: radial-gradient(circle at 50% 50%, $pure-white, $alabaster-stone);
+    @extend %soft-border-radius;
+    margin: $half-percent 0;
+    width: 100%;
+    padding: $half-percent 0;
+}

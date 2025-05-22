@@ -1,0 +1,23 @@
+// salad-maker.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+salad-maker {
+    @include flex(flex-start, center, column);
+    #salad-maker-title {
+        padding: $half-percent;
+        background-image: radial-gradient(at bottom, $pure-white, $morning-frost-blue, $purple-sprite);
+        // box shadow with radial gradient
+        box-shadow: $darker-black-shadow 0 0 $half-percent simple-calc(0.25, 0.25);
+        margin: $one-percent 0;
+        @extend %soft-border-radius;
+        h1 {
+            color: $almost-white;
+        }
+    }
+    salad-input {
+        width: 90%;
+    }
+}

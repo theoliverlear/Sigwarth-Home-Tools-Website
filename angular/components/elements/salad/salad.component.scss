@@ -1,0 +1,38 @@
+// salad.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+salad {
+    @include flex(center, center, column);
+    width: 100%;
+    background-color: $faded-purple-sprite;
+    padding: $one-percent 0;
+    margin: $one-percent 0;
+    .top-container {
+        width: 100%;
+        @include flex(space-around, center, row);
+        .salad-type-title {
+            text-decoration: underline;
+        }
+        .grams-title {
+            margin-left: $one-percent;
+        }
+        .salad-img {
+            width: $twenty-percent;
+            max-width: 40%;
+            max-height: 40%;
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    salad .top-container
+    {
+        @include flex(flex-start, center, column);
+        .salad-img {
+            margin: $one-percent 0;
+        }
+    }
+}

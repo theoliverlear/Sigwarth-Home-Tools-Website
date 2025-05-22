@@ -1,0 +1,36 @@
+// tools-dropdown.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+@import "../nav-item/nav-item.component";
+
+tools-dropdown {
+    //@include flex(flex-start, flex-start, column);
+    position: relative;
+    min-width: calc(calc($eight-percent * 1.02) + $one-percent);
+
+    .tools-div {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @include flex(space-around, center, column);
+        background-color: $black-shadow;
+        transition: background-color 0.15s;
+        padding: 0 $half-percent;
+        @extend %soft-border-radius;
+        > * {
+            margin: $half-percent 0;
+        }
+        &:hover {
+            background-color: $darker-black-shadow;
+        }
+    }
+    .tools-div tools-dropdown-item {
+        padding: $half-percent;
+        border-radius: $quarter-percent;
+        &:hover {
+            //background-color: $alabaster-stone;
+        }
+    }
+}

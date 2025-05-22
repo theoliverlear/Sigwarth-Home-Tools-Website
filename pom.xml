@@ -113,10 +113,10 @@
         <!--
         Starter for building web services using Spring Web Services
         -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web-services</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web-services</artifactId>-->
+<!--        </dependency>-->
 
         <!-- JDBC Starter tools for connecting to databases -->
         <dependency>

@@ -1,0 +1,14 @@
+// tools-dropdown-item.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+tools-dropdown-item {
+    @include flex(center, center, row);
+    width: 100%;
+    font-size: $h5-font-size;
+    nav-item {
+        min-height: 3ch;
+    }
+}

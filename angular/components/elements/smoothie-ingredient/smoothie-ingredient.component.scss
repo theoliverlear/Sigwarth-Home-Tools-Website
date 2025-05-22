@@ -1,0 +1,29 @@
+// smoothie-ingredient.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-ingredient {
+    @include flex(center, center, column);
+    background-color: $alabaster-stone;
+    padding: $three-quarter-percent;
+    @extend %soft-border-radius;
+    ss-img {
+        background-color: $alabaster-stone;
+        padding: $three-quarter-percent;
+        @include square-size($eight-percent);
+        @extend %soft-border-radius;
+        //@extend %simple-box-shadow;
+    }
+}
+@media screen and (max-width: 500px) {
+    smoothie-ingredient {
+        padding: $half-percent 0;
+        @include flex(center, center, column);
+        width: 24%;
+        ss-img {
+            @include square-size($five-percent);
+        }
+    }
+}

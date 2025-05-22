@@ -1,0 +1,16 @@
+<!-- smoothie-input-carousel.component.html -->
+<ng-container>
+    <ngb-carousel
+            *ngIf="smoothieIngredientAssets && smoothieIngredientAssets.length"
+            [showNavigationArrows]="true"
+            [showNavigationIndicators]="true"
+            [interval]="10000"
+            [pauseOnHover]="true"
+            [keyboard]="true"
+            [wrap]="true"
+            [activeId]="'0'">
+        <ng-template ngbSlide *ngFor="let smoothieInput of smoothieIngredientAssets">
+            <smoothie-input [inputType]="smoothieInput" [smoothie]="smoothie" (inputChange)="emitSmoothieInputChange($event)"/>
+        </ng-template>
+    </ngb-carousel>
+</ng-container>

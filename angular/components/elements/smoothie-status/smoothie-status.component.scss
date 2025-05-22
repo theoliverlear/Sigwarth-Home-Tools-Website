@@ -1,0 +1,22 @@
+// smoothie-status.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-status {
+    @include flex(center, center, column);
+    margin: $one-percent 0;
+    padding: $one-percent;
+    font-size: $h3-font-size;
+    min-width: 18ch;
+    @extend %soft-border-radius;
+    @extend %simple-box-shadow;
+    background-image: radial-gradient(circle, $hot-pink, $purple-sprite, $black-shadow);
+    ss-title {
+        @extend %black-reflection-text-underlined;
+    }
+    ss-img {
+        @include square-size($fifteen-percent);
+    }
+}

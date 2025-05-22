@@ -1,0 +1,9 @@
+<!-- indent-input.component.html -->
+<ng-container>
+    <ss-title [text]="'Indentation'" [tagType]="TagType.H4"/>
+    <ss-input [inputType]="InputType.NUMBER"
+              [value]="0"
+              [min]="0"
+              [max]="5"
+              (inputEvent)="emitIndentChange($event)"/>
+</ng-container>

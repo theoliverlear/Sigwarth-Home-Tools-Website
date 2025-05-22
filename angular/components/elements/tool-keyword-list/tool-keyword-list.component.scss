@@ -1,0 +1,12 @@
+// tool-keyword-list.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+tool-keyword-list {
+    @include flex(space-around, center, row);
+    width: 100%;
+    flex-wrap: wrap;
+    margin: $one-percent 0;
+}

@@ -1,0 +1,12 @@
+<!-- smoothie-ingredient-list.component.html -->
+<ng-container>
+    <smoothie-ingredient #appleJuiceElement
+                         [type]="IngredientType.APPLE_JUICE"
+                         [weightStatus]="WeightStatus.from(smoothie.appleJuiceStatus)"/>
+    <smoothie-ingredient #yogurtElement
+                         [type]="IngredientType.YOGURT"
+                         [weightStatus]="WeightStatus.from(smoothie.yogurtStatus)"/>
+    <smoothie-ingredient #frozenFruitElement
+                         [type]="IngredientType.FROZEN_FRUIT"
+                         [weightStatus]="WeightStatus.from(smoothie.frozenFruitStatus)"/>
+</ng-container>

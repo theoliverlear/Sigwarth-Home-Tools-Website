@@ -1,0 +1,55 @@
+// smoothie-input.component.scss
+@import "../../../styles/global-variables";
+@import "../../../styles/global-mixins";
+@import "../../../styles/global-functions";
+@import "../../../styles/global-placeholders";
+
+smoothie-input {
+    @include flex(center, center, column);
+    //background-image: linear-gradient(to bottom, $purple-sprite, $hot-pink, $purple-sprite);
+    background-image: radial-gradient(circle at 50% 50%, $purple-sprite, $hot-pink);
+    //background-color: $purple-sprite;
+    @extend %soft-border-radius;
+    position: relative;
+    left: 50%;
+    top: $one-percent;
+    transform: translateX(-50%);
+    width: $twenty-percent;
+    padding: $half-percent;
+    @extend %simple-box-shadow;
+    .input-container {
+        width: 99%;
+        height: 99%;
+        @extend %soft-border-radius;
+        @extend %softest-raise-above-box-shadow;
+        background-image: radial-gradient(circle at 50% 50%, $pure-white, $alabaster-stone);
+        @include flex(center, center, column);
+        .ingredient-type-title {
+            padding: $quarter-percent;
+            @extend %soft-border-radius;
+        }
+        .weight-div {
+            @include flex(center, center, row);
+            width: 100%;
+            .weight-type-title {
+                margin-left:  $quarter-percent;
+                h6 {
+                    font-style: italic;
+                }
+            }
+
+        }
+        ss-img {
+            @include square-size($ten-percent);
+            padding: $three-quarter-percent;
+            @extend %soft-border-radius;
+            //background-color: $thin-neutral-black;
+        }
+        ss-input input {
+            text-align: center;
+        }
+        .percentage-title {
+            margin: $half-percent 0;
+        }
+    }
+}

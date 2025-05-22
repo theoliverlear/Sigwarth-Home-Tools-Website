@@ -2,14 +2,24 @@ package org.theoliverlear.model.carbcounter;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Component;
 
 @Getter
 @Setter
+@Component
 public class CarbItem {
-    double servingWeight;
-    double weightUnits;
-    double carbsPerServing;
-    int carbs;
+    private double servingWeight;
+    private double weightUnits;
+    private double carbsPerServing;
+    private int carbs;
+
+    public CarbItem() {
+        this.servingWeight = 0;
+        this.weightUnits = 0;
+        this.carbsPerServing = 0;
+        this.carbs = 0;
+    }
+
     public CarbItem(double servingWeight, double weightUnitsMeasured,  double carbsPerServing) {
         this.servingWeight = servingWeight;
         this.weightUnits = weightUnitsMeasured;

@@ -1,0 +1,14 @@
+<!-- salad-input.component.html -->
+<ng-container>
+    <ss-title id="lettuce-label-title" [tagType]="TagType.H4" [text]="'Grams of Lettuce: '"/>
+    <div class="input-end-div">
+        <ss-input [inputType]="InputType.NUMBER"
+                  [value]="114"
+                  [placeholder]="'Enter grams of lettuce'"
+                  [min]="1"
+                  [max]="10000"
+        (inputEvent)="emitInputEvent($event)"/>
+        <ss-title [text]="'g'" [tagType]="TagType.H4"/>
+        <ss-img [imageAsset]="saladLettuceImageAsset"/>
+    </div>
+</ng-container>

@@ -1,0 +1,29 @@
+<!-- code-commenter.component.html -->
+<ng-container>
+    <div class="code-commenter-title-div">
+        <ss-title [tagType]="TagType.H1" [text]="'Code Commenter'"/>
+        <subtitle [tagType]="TagType.H4" [text]="'Comment your code with ease.'"/>
+    </div>
+    <comment-heading-output [commentHeading]="commentOutput"/>
+    <clipboard-button [textToCopy]="commentOutput"/>
+    <div class="code-commenter-settings-div">
+        <ss-title [text]="'Settings'" [tagType]="TagType.H3"/>
+        <ss-title [text]="'Comment Type'" [tagType]="TagType.H4"/>
+        <dropdown [dropdownItems]="CommentHeadingTypes.getAllExamples()"
+                  [title]="'Comment Type'"
+                  (dropdownSelected)="updateCommentType($event)"/>
+        <hr/>
+        <div class="heading-input-div">
+            <ss-title [text]="'Heading Text'" [tagType]="TagType.H4"/>
+            <div class="heading-input-with-button">
+                <ss-input #headingInput
+                          [placeholder]="'Ex. Find By User'"
+                          (inputEvent)="updateTextContent($event)"/>
+                <ss-img [imageAsset]="cancelIconImageAsset"
+                        (click)="clearHeadingInput()"/>
+            </div>
+        </div>
+        <hr/>
+        <indent-input (indentChange)="updateIndentLevel($event)"/>
+    </div>
+</ng-container>
