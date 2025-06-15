@@ -7,14 +7,21 @@
 home-anchor {
     //@include square-size(calc($two-half-percent * 1.03));
     @include square-size(calc($three-half-percent * 0.95));
-    background-color: $alabaster-stone;
+    //background-color: $alabaster-stone;
     padding: $third-percent $third-percent $half-percent $third-percent;
     position: absolute;
     top: $third-percent;
     left: $one-percent;
+    //border: $thinnest-border solid $blue-gray;
+    box-shadow: $darker-black-shadow 0 0 simplest-calc(0.5) simplest-calc(0.15);
     @extend %circle-border-radius;
+    @extend %color-bloom-gradient-background;
+    //border: $thin-border solid $purple-sprite;
     //box-shadow: $toned-leaf simplest-calc(0.05) simplest-calc(0.05) 0 0;
     transition: box-shadow, transform, 0.3s;
+    ss-img {
+        opacity: 0.75;
+    }
     &:hover {
         //box-shadow: $toned-leaf simplest-calc(0.15) simplest-calc(0.15) 0 0;
         cursor: pointer;
